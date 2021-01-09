@@ -1,0 +1,30 @@
+{
+	"name"        : "justintadlock/hybrid-theme",
+	"description" : "Additional theme specific features for the Hybrid Core framework.",
+	"keywords"    : [ "wordpress" ],
+	"homepage"    : "https://github.com/justintadlock/hybrid-theme",
+	"license"     : "GPL-2.0-or-later",
+	"authors"     : [
+		{
+			"name"     : "Justin Tadlock",
+			"email"    : "justintadlock@gmail.com",
+			"homepage" : "https://themehybrid.com",
+			"role"     : "Developer"
+		}
+	],
+	"support"     : {
+		"issues" : "https://github.com/justintadlock/hybrid-theme/issues",
+		"forum"  : "https://themehybrid.com/board/topics"
+	},
+	"autoload"    : {
+		"psr-4" : {
+			"Hybrid\\Theme\\" : "src/"
+		},
+		"files" : [
+			"src/bootstrap-theme.php"
+		]
+	},
+	"require"     : {
+		"php" : ">=5.6"
+	}
+}
