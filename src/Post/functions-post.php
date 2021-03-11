@@ -56,7 +56,7 @@ function hierarchy() {
 	// Template based off the post type.
 	$hierarchy[] = $post_type;
 
-	return apply_filters( 'hybrid/post/hierarchy', $hierarchy );
+	return apply_filters( 'hybrid/theme/post/hierarchy', $hierarchy );
 }
 
 /**
@@ -107,7 +107,7 @@ function render_title( array $args = [] ) {
 		$text
 	);
 
-	return apply_filters( 'hybrid/post/title', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/post/title', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -149,7 +149,7 @@ function render_permalink( array $args = [] ) {
 		sprintf( $args['text'], esc_url( $url ) )
 	);
 
-	return apply_filters( 'hybrid/post/permalink', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/post/permalink', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -198,7 +198,7 @@ function render_author( array $args = [] ) {
 	$html = sprintf( '<span class="%s">%s</span>', esc_attr( $args['class'] ), $author );
 
 	return apply_filters(
-		'hybrid/post/author',
+		'hybrid/theme/post/author',
 		$args['before'] . $html . $args['after']
 	);
 }
@@ -242,7 +242,7 @@ function render_date( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/post/date',
+		'hybrid/theme/post/date',
 		$args['before'] . $html . $args['after']
 	);
 }
@@ -296,7 +296,7 @@ function render_comments_link( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/post/comments',
+		'hybrid/theme/post/comments',
 		$args['before'] . $html . $args['after']
 	);
 }
@@ -354,7 +354,7 @@ function render_terms( array $args = [] ) {
 		$html = $args['before'] . $html . $args['after'];
 	}
 
-	return apply_filters( 'hybrid/post/terms', $html );
+	return apply_filters( 'hybrid/theme/post/terms', $html );
 }
 
 /**
@@ -399,7 +399,7 @@ function render_format( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/post/format',
+		'hybrid/theme/post/format',
 		$args['before'] . $html . $args['after']
 	);
 }

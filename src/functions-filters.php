@@ -49,7 +49,7 @@ function post_type_support() {
 function meta_charset() {
 
 	echo apply_filters(
-		'hybrid/head/meta/charset',
+		'hybrid/theme/head/meta/charset',
 		sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) )
 	);
 }
@@ -64,7 +64,7 @@ function meta_charset() {
 function meta_viewport() {
 
 	echo apply_filters(
-		'hybrid/head/meta/viewport',
+		'hybrid/theme/head/meta/viewport',
 		'<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n"
 	);
 }
@@ -86,7 +86,7 @@ function meta_generator() {
 		esc_attr( $theme->get( 'Version' ) )
 	);
 
-	echo apply_filters( 'hybrid/head/meta/generator', $generator );
+	echo apply_filters( 'hybrid/theme/head/meta/generator', $generator );
 }
 
 /**
@@ -108,7 +108,7 @@ function link_pingback() {
 		);
 	}
 
-	echo apply_filters( 'hybrid/head/link/pingback', $link );
+	echo apply_filters( 'hybrid/theme/head/link/pingback', $link );
 }
 
 /**
@@ -140,7 +140,7 @@ function document_title_parts( $doctitle ) {
  */
 function archive_title_filter( $title ) {
 
-	return apply_filters( 'hybrid/archive/title', Title::current() );
+	return apply_filters( 'hybrid/theme/archive/title', Title::current() );
 }
 
 /**
@@ -187,7 +187,7 @@ function archive_description_filter( $desc ) {
  */
 function archive_description_format( $desc ) {
 
-	return apply_filters( 'hybrid/archive/description', $desc );
+	return apply_filters( 'hybrid/theme/archive/description', $desc );
 }
 
 /**
@@ -775,7 +775,7 @@ function post_class_filter( $classes, $class, $post_id ) {
 
 	// Add taxonomy term classes.  By default, no taxonomies (except for
 	// post formats added above) are added.
-	$taxonomies = apply_filters( 'hybrid/attr/post/class/taxonomy', [] );
+	$taxonomies = apply_filters( 'hybrid/theme/attr/post/class/taxonomy', [] );
 
 	foreach ( (array) $taxonomies as $taxonomy ) {
 

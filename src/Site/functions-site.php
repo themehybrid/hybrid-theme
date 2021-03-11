@@ -60,7 +60,7 @@ function render_title( array $args = [] ) {
 		);
 	}
 
-	return apply_filters( 'hybrid/site/title', $html );
+	return apply_filters( 'hybrid/theme/site/title', $html );
 }
 
 /**
@@ -104,7 +104,7 @@ function render_description( array $args = [] ) {
 		);
 	}
 
-	return apply_filters( 'hybrid/site/description', $html );
+	return apply_filters( 'hybrid/theme/site/description', $html );
 }
 
 /**
@@ -145,7 +145,7 @@ function render_home_link( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/site/home_link',
+		'hybrid/theme/site/home_link',
 		$args['before'] . $html . $args['after']
 	);
 }
@@ -188,7 +188,7 @@ function render_wp_link( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/site/wp_link',
+		'hybrid/theme/site/wp_link',
 		$args['before'] . $html . $args['after']
 	);
 }

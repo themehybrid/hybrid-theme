@@ -32,7 +32,7 @@ function hierarchy() {
 		$hier[] = 'ping';
 	}
 
-	return apply_filters( 'hybrid/comment/hierarchy', $hier );
+	return apply_filters( 'hybrid/theme/comment/hierarchy', $hier );
 }
 
 /**
@@ -71,7 +71,7 @@ function render_author( array $args = [] ) {
 		sprintf( $args['text'], get_comment_author_link() )
 	);
 
-	return apply_filters( 'hybrid/comment/author', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/comment/author', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -118,7 +118,7 @@ function render_author_link( array $args = [] ) {
 		);
 	}
 
-	return apply_filters( 'hybrid/comment/author/link', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/comment/author/link', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -160,7 +160,7 @@ function render_permalink( array $args = [] ) {
 		sprintf( $args['text'], esc_url( $url ) )
 	);
 
-	return apply_filters( 'hybrid/comment/permalink', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/comment/permalink', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -203,7 +203,7 @@ function render_date( array $args = [] ) {
 		sprintf( $args['text'], esc_html( get_comment_date( $args['format'] ) ) )
 	);
 
-	return apply_filters( 'hybrid/comment/date', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/comment/date', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -246,7 +246,7 @@ function render_time( array $args = [] ) {
 		sprintf( $args['text'], esc_html( get_comment_time( $args['format'] ) ) )
 	);
 
-	return apply_filters( 'hybrid/comment/time', $args['before'] . $html . $args['after'] );
+	return apply_filters( 'hybrid/theme/comment/time', $args['before'] . $html . $args['after'] );
 }
 
 /**
@@ -294,7 +294,7 @@ function render_edit_link( array $args = [] ) {
 		$html = $args['before'] . $html . $args['after'];
 	}
 
-	return apply_filters( 'hybrid/comment/edit_link', $html );
+	return apply_filters( 'hybrid/theme/comment/edit_link', $html );
 }
 
 /**
@@ -360,7 +360,7 @@ function render_reply_link( array $args = [] ) {
 		$html = $before . $html . $after;
 	}
 
-	return apply_filters( 'hybrid/comment/reply_link', $html );
+	return apply_filters( 'hybrid/theme/comment/reply_link', $html );
 }
 
 /**
@@ -418,7 +418,7 @@ function render_parent_link( $args = [] ) {
 		}
 	}
 
-	return apply_filters( 'hybrid/comment/parent_link', $html, $args );
+	return apply_filters( 'hybrid/theme/comment/parent_link', $html, $args );
 }
 
 /**
