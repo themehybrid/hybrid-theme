@@ -1,6 +1,6 @@
 # Hybrid\\Theme
 
-Hybrid Theme is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress theme framework that creates extra controls and settings that theme authors can use to build their themes.
+Hybrid Theme is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress theme framework that provides collection of optimizations and helper tools to aid in Theme development. Such as Comment, Menu, Post, Sidebar etc filters and helper functions.
 
 ## Requirements
 
@@ -39,8 +39,6 @@ After that point, you can register the service provider:
 ```php
 $app->provider( \Hybrid\Theme\Provider::class );
 ```
-
-This is basically going to set up and ready any JS-based customizer controls.
 
 ## Copyright and License
 
