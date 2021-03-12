@@ -29,7 +29,7 @@ function mod( $name, $default = false ) {
 
 	return get_theme_mod(
 		$name,
-		apply_filters( "hybrid/theme/theme/mod/{$name}/default", $default )
+		apply_filters( "hybrid/theme/mod/{$name}/default", $default )
 	);
 }
 
@@ -80,7 +80,7 @@ function render_link( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/theme/theme/link/parent',
+		'hybrid/theme/link/parent',
 		$args['before'] . $html . $args['after']
 	);
 }
@@ -136,7 +136,7 @@ function render_child_link( array $args = [] ) {
 	);
 
 	return apply_filters(
-		'hybrid/theme/theme/link/child',
+		'hybrid/theme/link/child',
 		$args['before'] . $html . $args['after']
 	);
 }
