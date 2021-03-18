@@ -1,6 +1,6 @@
 # Hybrid\\Theme
 
-Hybrid Theme is an add-on package for the [Hybrid Core](https://github.com/justintadlock/hybrid-core) WordPress theme framework that provides collection of optimizations and helper tools to aid in Theme development. Such as Comment, Menu, Post, Sidebar etc filters and helper functions.
+Hybrid Theme is an add-on package for the [Hybrid Core](https://github.com/themehybrid/hybrid-core) WordPress theme framework that provides collection of optimizations and helper tools to aid in Theme development. Such as Comment, Menu, Post, Sidebar etc filters and helper functions.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ cd path/to/wp-content/themes/<your-theme-name>
 Then, use Composer to install the package.
 
 ```bash
-composer require justintadlock/hybrid-theme
+composer require themehybrid/hybrid-theme
 ```
 
 ### Register the service provider
@@ -44,4 +44,4 @@ $app->provider( \Hybrid\Theme\Provider::class );
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2021 &copy; [Justin Tadlock](http://justintadlock.com).
+2008&thinsp;&ndash;&thinsp;2021 &copy; [Justin Tadlock](https://themehybrid.com).
