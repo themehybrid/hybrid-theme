@@ -1,8 +1,8 @@
 {
-	"name"        : "justintadlock/hybrid-theme",
-	"description" : "Additional theme specific features for the Hybrid Core framework.",
+	"name"        : "themehybrid/hybrid-theme",
+	"description" : "Hybrid Theme is an add-on for the Hybrid Core framework, which provides collection of optimizations and helper tools to aid in Theme development.",
 	"keywords"    : [ "wordpress" ],
-	"homepage"    : "https://github.com/justintadlock/hybrid-theme",
+	"homepage"    : "https://github.com/themehybrid/hybrid-theme",
 	"license"     : "GPL-2.0-or-later",
 	"authors"     : [
 		{
@@ -13,8 +13,8 @@
 		}
 	],
 	"support"     : {
-		"issues" : "https://github.com/justintadlock/hybrid-theme/issues",
-		"forum"  : "https://themehybrid.com/board/topics"
+		"issues" : "https://github.com/themehybrid/hybrid-theme/issues",
+		"forum"  : "https://themehybrid.com/board/forums/hybrid-core"
 	},
 	"autoload"    : {
 		"psr-4" : {
