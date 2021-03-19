@@ -15,7 +15,6 @@
 namespace Hybrid\Theme;
 
 use Hybrid\Proxies\App;
-use Hybrid\Support\Tools\Collection;
 
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
