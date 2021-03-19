@@ -14,7 +14,7 @@
 
 namespace Hybrid\Theme;
 
-use Hybrid\Support\Tools\ServiceProvider;
+use Hybrid\Tools\ServiceProvider;
 
 /**
  * Theme provider.
