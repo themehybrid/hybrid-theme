@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -17,7 +17,7 @@ namespace Hybrid\Theme\Post;
  * Creates a hierarchy based on the current post. Its primary purpose is for
  * use with post views/templates.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @return array
  */
@@ -62,7 +62,7 @@ function hierarchy() {
 /**
  * Outputs the post title HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -75,7 +75,7 @@ function display_title( array $args = [] ) {
 /**
  * Returns the post title HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -113,7 +113,7 @@ function render_title( array $args = [] ) {
 /**
  * Outputs the post permalink HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -126,7 +126,7 @@ function display_permalink( array $args = [] ) {
 /**
  * Returns the post permalink HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -155,7 +155,7 @@ function render_permalink( array $args = [] ) {
 /**
  * Outputs the post author HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -168,7 +168,7 @@ function display_author( array $args = [] ) {
 /**
  * Returns the post author HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -206,7 +206,7 @@ function render_author( array $args = [] ) {
 /**
  * Outputs the post date HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -219,7 +219,7 @@ function display_date( array $args = [] ) {
 /**
  * Returns the post date HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -250,7 +250,7 @@ function render_date( array $args = [] ) {
 /**
  * Outputs the post comments link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -263,7 +263,7 @@ function display_comments_link( array $args = [] ) {
 /**
  * Returns the post comments link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -304,7 +304,7 @@ function render_comments_link( array $args = [] ) {
 /**
  * Outputs the post terms HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -317,7 +317,7 @@ function display_terms( array $args = [] ) {
 /**
  * Returns the post terms HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -360,7 +360,7 @@ function render_terms( array $args = [] ) {
 /**
  * Outputs the post format HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -373,7 +373,7 @@ function display_format( array $args = [] ) {
 /**
  * Returns the post format HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -408,7 +408,7 @@ function render_format( array $args = [] ) {
  * Splits the post mime type into two distinct parts: type / subtype
  * (e.g., image / png). Returns an array of the parts.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  \WP_Post|int  $post  A post object or ID.
  * @return array
@@ -432,7 +432,7 @@ function mime_types( $post = null ) {
  * Checks if a post has any content. Useful if you need to check if the user has
  * written any content before performing any actions.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  \WP_Post|int  $post  A post object or post ID.
  * @return bool
@@ -446,7 +446,7 @@ function has_content( $post = null ) {
 /**
  * Returns the number of items in all the galleries for the post.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  \WP_Post|int  $post  A post object or ID.
  * @return int

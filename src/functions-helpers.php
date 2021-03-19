@@ -7,7 +7,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -20,7 +20,7 @@ use Hybrid\Support\Tools\Collection;
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $value
  * @return string
@@ -33,7 +33,7 @@ function sprintf_theme_dir( $value ) {
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory URIs.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $value
  * @return string
@@ -46,7 +46,7 @@ function sprintf_theme_uri( $value ) {
 /**
  * Converts a hex color to RGB.  Returns the RGB values as an array.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $hex
  * @return array
@@ -74,7 +74,7 @@ function hex_to_rgb( $hex ) {
  * Conditional check to determine if we are in script debug mode.  This is
  * generally used to decide whether to load development versions of scripts/styles.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @return bool
  */
@@ -87,7 +87,7 @@ function is_script_debug() {
  * Helper function for replacing a class in an HTML string. This function only
  * replaces the first class attribute it comes upon and stops.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $class
  * @param  string  $html
@@ -108,7 +108,7 @@ function replace_html_class( $class, $html ) {
  * useful for checking if the widget exists before directly calling `the_widget()`
  * within a template.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $widget
  * @return bool
@@ -123,7 +123,7 @@ function widget_exists( $widget ) {
  * this because it returns the front page URL.  Sometimes the blog page URL is
  * set to a different page.  This function handles both scenarios.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @return string
  */
@@ -147,7 +147,7 @@ function blog_url() {
  * this is similar to, but not quite the same as `! is_singular()`, which
  * wouldn't account for the 404 page.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @return bool
  */

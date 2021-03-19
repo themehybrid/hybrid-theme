@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -19,7 +19,7 @@ namespace Hybrid\Theme;
  * The purpose of this function is to provide that additional filter hook.  To
  * filter the final theme mod, use the core `theme_mod_{$name}` filter hook.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $name
  * @param  mixed   $default
@@ -36,7 +36,7 @@ function mod( $name, $default = false ) {
 /**
  * Outputs the [parent] theme link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -49,7 +49,7 @@ function display_link( array $args = [] ) {
 /**
  * Returns the [parent] theme link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -88,7 +88,7 @@ function render_link( array $args = [] ) {
 /**
  * Outputs the child theme link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void
@@ -101,7 +101,7 @@ function display_child_link( array $args = [] ) {
 /**
  * Returns the child theme link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
