@@ -10,7 +10,7 @@ Hybrid Theme is an add-on package for the [Hybrid Core](https://github.com/theme
 
 ## Documentation
 
-This project is only meant to work in conjunction with the Hybrid Core framework.  If you're not already working with and building a theme using it, the following will be useless.
+This project is a part of the Hybrid Core framework. It may require other packages, which will be installed via Composer.
 
 ### Installation
 
@@ -31,13 +31,13 @@ composer require themehybrid/hybrid-theme
 You need to register the service provider during your bootstrapping process.  In your bootstrapping code, you should have something like the following:
 
 ```php
-$app = new \Hybrid\Core\Application();
+$theme = new \Hybrid\Core\Application();
 ```
 
 After that point, you can register the service provider:
 
 ```php
-$app->provider( \Hybrid\Theme\Provider::class );
+$theme->provider( \Hybrid\Theme\Provider::class );
 ```
 
 ## Copyright and License
