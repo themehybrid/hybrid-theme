@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -16,7 +16,7 @@ namespace Hybrid\Theme\Comment;
 /**
  * Returns a hierarchy for the current comment.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @return array
  */
@@ -38,7 +38,7 @@ function hierarchy() {
 /**
  * Outputs the comment author HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -51,7 +51,7 @@ function display_author( array $args = [] ) {
 /**
  * Returns the comment author HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -124,7 +124,7 @@ function render_author_link( array $args = [] ) {
 /**
  * Outputs the comment permalink HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -137,7 +137,7 @@ function display_permalink( array $args = [] ) {
 /**
  * Returns the comment permalink HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -166,7 +166,7 @@ function render_permalink( array $args = [] ) {
 /**
  * Outputs the comment date HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -179,7 +179,7 @@ function display_date( array $args = [] ) {
 /**
  * Returns the comment date HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -209,7 +209,7 @@ function render_date( array $args = [] ) {
 /**
  * Outputs the comment time HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -222,7 +222,7 @@ function display_time( array $args = [] ) {
 /**
  * Returns the comment time HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -252,7 +252,7 @@ function render_time( array $args = [] ) {
 /**
  * Outputs the comment edit link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -265,7 +265,7 @@ function display_edit_link( array $args = [] ) {
 /**
  * Returns the comment edit link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -300,7 +300,7 @@ function render_edit_link( array $args = [] ) {
 /**
  * Outputs the comment reply link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -316,7 +316,7 @@ function display_reply_link( array $args = [] ) {
  * arguments (it isn't meant to).  This function is just a wrapper for
  * `get_comment_reply_link()`, which adds in the arguments automatically.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return string
@@ -366,7 +366,7 @@ function render_reply_link( array $args = [] ) {
 /**
  * Outputs the comment parent link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return void
@@ -379,7 +379,7 @@ function display_parent_link( array $args = [] ) {
 /**
  * Returns the comment parent link HTML.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  array   $args
  * @return string
@@ -424,7 +424,7 @@ function render_parent_link( $args = [] ) {
 /**
  * Conditional function to check if a comment is approved.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  \WP_Comment|int  Comment object or ID.
  * @return bool

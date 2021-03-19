@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -16,7 +16,7 @@ namespace Hybrid\Theme\Menu;
 /**
  * Outputs the nav menu name by theme location.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $location
  * @return void
@@ -29,7 +29,7 @@ namespace Hybrid\Theme\Menu;
 /**
  * Function for grabbing a WP nav menu name based on theme location.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $location
  * @return string
@@ -46,7 +46,7 @@ function render_name( $location ) {
 /**
  * Outputs the nav menu theme location name.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $location
  * @return void
@@ -59,7 +59,7 @@ function display_location( $location ) {
 /**
  * Function for grabbing a WP nav menu theme location name.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $location
  * @return string

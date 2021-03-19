@@ -6,7 +6,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -16,7 +16,7 @@ namespace Hybrid\Theme\Sidebar;
 /**
  * Outputs a sidebar name.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @param  string  $sidebar_id
  * @return void
@@ -29,7 +29,7 @@ function display_name( $sidebar_id ) {
 /**
  * Function for grabbing a dynamic sidebar name.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  * @global array   $wp_registered_sidebars
  * @param  string  $sidebar_id

@@ -8,7 +8,7 @@
  *
  * @package   HybridCore
  * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2019, Justin Tadlock
+ * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
  * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -18,7 +18,7 @@ namespace Hybrid\Theme\Util;
 /**
  * Title static class.
  *
- * @since  5.0.0
+ * @since  1.0.0
  * @access public
  */
 class Title {
@@ -26,7 +26,7 @@ class Title {
 	/**
 	 * Retrieve the current page title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -56,7 +56,7 @@ class Title {
 	/**
 	 * Retrieve the general archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -103,7 +103,7 @@ class Title {
 	/**
 	 * Retrieve the front page title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -115,7 +115,7 @@ class Title {
 	/**
 	 * Retrieve the single post title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -127,7 +127,7 @@ class Title {
 	/**
 	 * Retrieve the home/posts-page title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -139,7 +139,7 @@ class Title {
 	/**
 	 * Retrieve the search results title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -155,7 +155,7 @@ class Title {
 	/**
 	 * Retrieve the 404 page title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -167,7 +167,7 @@ class Title {
 	/**
 	 * Retrieve the term archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -179,7 +179,7 @@ class Title {
 	/**
 	 * Retrieve the post type archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -191,7 +191,7 @@ class Title {
 	/**
 	 * Retrieve the month archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -203,7 +203,7 @@ class Title {
 	/**
 	 * Retrieve the author archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -215,7 +215,7 @@ class Title {
 	/**
 	 * Retrieve the year archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -227,7 +227,7 @@ class Title {
 	/**
 	 * Retrieve the week archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -244,7 +244,7 @@ class Title {
 	/**
 	 * Retrieve the day archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -256,7 +256,7 @@ class Title {
 	/**
 	 * Retrieve the hour archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -268,7 +268,7 @@ class Title {
 	/**
 	 * Retrieve the minute archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */
@@ -284,7 +284,7 @@ class Title {
 	/**
 	 * Retrieve the minute + hour archive title.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access public
 	 * @return string
 	 */

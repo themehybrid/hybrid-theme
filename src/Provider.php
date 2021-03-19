@@ -14,7 +14,7 @@
 
 namespace Hybrid\Theme;
 
-use Hybrid\Support\Tools\ServiceProvider;
+use Hybrid\Tools\ServiceProvider;
 
 /**
  * Theme provider.
@@ -41,7 +41,7 @@ class Provider extends ServiceProvider {
 	/**
 	 * Adds the default service providers for the framework.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
@@ -55,7 +55,7 @@ class Provider extends ServiceProvider {
 	/**
 	 * Bootstrap action/filter hook calls.
 	 *
-	 * @since  5.0.0
+	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */

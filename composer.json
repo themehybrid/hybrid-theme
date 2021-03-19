@@ -26,5 +26,8 @@
 	},
 	"require"     : {
 		"php" : ">=5.6"
+	},
+	"suggest"     : {
+		"themehybrid/hybrid-tools" : "Needed if registering the service provider with Hybrid Core."
 	}
 }
