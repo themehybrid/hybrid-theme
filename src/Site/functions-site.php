@@ -22,7 +22,6 @@ namespace Hybrid\Theme\Site;
  * @return void
  */
 function display_title( array $args = [] ) {
-
 	echo render_title( $args );
 }
 
@@ -72,7 +71,6 @@ function render_title( array $args = [] ) {
  * @return void
  */
 function display_description( array $args = [] ) {
-
 	echo render_description( $args );
 }
 
@@ -116,7 +114,6 @@ function render_description( array $args = [] ) {
  * @return void
  */
 function display_home_link( array $args = [] ) {
-
 	echo render_home_link( $args );
 }
 
@@ -159,7 +156,6 @@ function render_home_link( array $args = [] ) {
  * @return void
  */
 function display_wp_link( array $args = [] ) {
-
 	echo render_wp_link();
 }
 

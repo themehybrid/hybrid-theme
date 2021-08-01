@@ -28,7 +28,6 @@ function hierarchy() {
 	$hier[] = $type;
 
 	if ( in_array( $type, [ 'pingback', 'trackback'] ) ) {
-
 		$hier[] = 'ping';
 	}
 
@@ -44,7 +43,6 @@ function hierarchy() {
  * @return void
  */
 function display_author( array $args = [] ) {
-
 	echo render_author( $args );
 }
 
@@ -83,7 +81,6 @@ function render_author( array $args = [] ) {
  * @return void
  */
 function display_author_link( array $args = [] ) {
-
 	echo render_author_link( $args );
 }
 
@@ -130,7 +127,6 @@ function render_author_link( array $args = [] ) {
  * @return void
  */
 function display_permalink( array $args = [] ) {
-
 	echo render_permalink( $args );
 }
 
@@ -172,7 +168,6 @@ function render_permalink( array $args = [] ) {
  * @return void
  */
 function display_date( array $args = [] ) {
-
 	echo render_date( $args );
 }
 
@@ -215,7 +210,6 @@ function render_date( array $args = [] ) {
  * @return void
  */
 function display_time( array $args = [] ) {
-
 	echo render_time( $args );
 }
 
@@ -258,7 +252,6 @@ function render_time( array $args = [] ) {
  * @return void
  */
 function display_edit_link( array $args = [] ) {
-
 	echo render_edit_link( $args );
 }
 
@@ -306,7 +299,6 @@ function render_edit_link( array $args = [] ) {
  * @return void
  */
 function display_reply_link( array $args = [] ) {
-
 	echo render_reply_link( $args );
 }
 
@@ -372,7 +364,6 @@ function render_reply_link( array $args = [] ) {
  * @return void
  */
 function display_parent_link( array $args = [] ) {
-
 	echo render_parent_link( $args );
 }
 

@@ -25,42 +25,13 @@ use Hybrid\Core\ServiceProvider;
 class Provider extends ServiceProvider {
 
 	/**
-	 * Registration callback that adds a single instance of the theme
-	 * object to the container.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @return void
-	 */
-	public function register() {
-
-		$this->registerDefaultProviders();
-		$this->bootstrapFilters();
-	}
-
-	/**
-	 * Adds the default service providers for the framework.
-	 *
-	 * @since  1.0.0
-	 * @access protected
-	 * @return void
-	 */
-	protected function registerDefaultProviders() {
-
-		array_map( function( $provider ) {
-			$this->provider( $provider );
-		}, [] );
-	}
-
-	/**
 	 * Bootstrap action/filter hook calls.
 	 *
 	 * @since  1.0.0
 	 * @access protected
 	 * @return void
 	 */
-	protected function bootstrapFilters() {
-
-		require_once( 'bootstrap-filters.php' );
+	protected function boot() {
+		require_once 'bootstrap-filters.php';
 	}
 }

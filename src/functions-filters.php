@@ -47,7 +47,6 @@ function post_type_support() {
  * @return void
  */
 function meta_charset() {
-
 	echo apply_filters(
 		'hybrid/theme/head/meta/charset',
 		sprintf( '<meta charset="%s" />' . "\n", esc_attr( get_bloginfo( 'charset' ) ) )
@@ -62,7 +61,6 @@ function meta_charset() {
  * @return void
  */
 function meta_viewport() {
-
 	echo apply_filters(
 		'hybrid/theme/head/meta/viewport',
 		'<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n"
@@ -101,7 +99,6 @@ function link_pingback() {
 	$link = '';
 
 	if ( 'open' === get_option( 'default_ping_status' ) ) {
-
 		$link = sprintf(
 			'<link rel="pingback" href="%s" />' . "\n",
 			esc_url( get_bloginfo( 'pingback_url' ) )
@@ -139,7 +136,6 @@ function document_title_parts( $doctitle ) {
  * @return string
  */
 function archive_title_filter( $title ) {
-
 	return apply_filters( 'hybrid/theme/archive/title', Title::current() );
 }
 
@@ -186,7 +182,6 @@ function archive_description_filter( $desc ) {
  * @return string
  */
 function archive_description_format( $desc ) {
-
 	return apply_filters( 'hybrid/theme/archive/description', $desc );
 }
 
@@ -205,7 +200,6 @@ function untitled_post( $title ) {
 
 	// Translators: Used as a placeholder for untitled posts on non-singular views.
 	if ( ! $title && ! is_singular() && in_the_loop() && ! is_admin() ) {
-
 		$title = esc_html__( '(Untitled)', 'hybrid-core' );
 	}
 

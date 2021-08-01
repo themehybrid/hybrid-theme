@@ -26,7 +26,6 @@ namespace Hybrid\Theme;
  * @return mixed
  */
 function mod( $name, $default = false ) {
-
 	return get_theme_mod(
 		$name,
 		apply_filters( "hybrid/theme/mod/{$name}/default", $default )
@@ -42,7 +41,6 @@ function mod( $name, $default = false ) {
  * @return void
  */
 function display_link( array $args = [] ) {
-
 	echo render_link( $args );
 }
 
@@ -94,7 +92,6 @@ function render_link( array $args = [] ) {
  * @return void
  */
 function display_child_link( array $args = [] ) {
-
 	echo render_child_link( $args );
 }
 

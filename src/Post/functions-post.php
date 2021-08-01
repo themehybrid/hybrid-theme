@@ -68,7 +68,6 @@ function hierarchy() {
  * @return void
  */
 function display_title( array $args = [] ) {
-
 	echo render_title( $args );
 }
 
@@ -119,7 +118,6 @@ function render_title( array $args = [] ) {
  * @return void
  */
 function display_permalink( array $args = [] ) {
-
 	echo render_permalink( $args );
 }
 
@@ -161,7 +159,6 @@ function render_permalink( array $args = [] ) {
  * @return void
  */
 function display_author( array $args = [] ) {
-
 	echo render_author( $args );
 }
 
@@ -212,7 +209,6 @@ function render_author( array $args = [] ) {
  * @return void
  */
 function display_date( array $args = [] ) {
-
 	echo render_date( $args );
 }
 
@@ -256,7 +252,6 @@ function render_date( array $args = [] ) {
  * @return void
  */
 function display_comments_link( array $args = [] ) {
-
 	echo render_comments_link( $args );
 }
 
@@ -310,7 +305,6 @@ function render_comments_link( array $args = [] ) {
  * @return void
  */
 function display_terms( array $args = [] ) {
-
 	echo render_terms( $args );
 }
 
@@ -366,7 +360,6 @@ function render_terms( array $args = [] ) {
  * @return void
  */
 function display_format( array $args = [] ) {
-
 	echo render_format( $args );
 }
 

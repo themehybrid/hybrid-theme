@@ -108,7 +108,6 @@ class Title {
 	 * @return string
 	 */
 	public static function frontPage() {
-
 		return get_bloginfo( 'name', 'display' );
 	}
 
@@ -120,7 +119,6 @@ class Title {
 	 * @return string
 	 */
 	public static function post() {
-
 		return single_post_title( '', false );
 	}
 
@@ -132,7 +130,6 @@ class Title {
 	 * @return string
 	 */
 	public static function home() {
-
 		return get_post_field( 'post_title', get_queried_object_id() );
 	}
 
@@ -144,7 +141,6 @@ class Title {
 	 * @return string
 	 */
 	public static function search() {
-
 		return sprintf(
 			// Translators: %s is the search query.
 			esc_html__( 'Search results for: %s', 'hybrid-core' ),
@@ -160,7 +156,6 @@ class Title {
 	 * @return string
 	 */
 	public static function error() {
-
 		return esc_html__( '404 Not Found', 'hybrid-core' );
 	}
 
@@ -172,7 +167,6 @@ class Title {
 	 * @return string
 	 */
 	public static function term() {
-
 		return single_term_title( '', false );
 	}
 
@@ -184,7 +178,6 @@ class Title {
 	 * @return string
 	 */
 	public static function postTypeArchive() {
-
 		return post_type_archive_title( '', false );
 	}
 
@@ -196,7 +189,6 @@ class Title {
 	 * @return string
 	 */
 	public static function month() {
-
 		return single_month_title( ' ', false );
 	}
 
@@ -208,7 +200,6 @@ class Title {
 	 * @return string
 	 */
 	public static function author() {
-
 		return get_the_author_meta( 'display_name', absint( get_query_var( 'author' ) ) );
 	}
 
@@ -220,7 +211,6 @@ class Title {
 	 * @return string
 	 */
 	public static function year() {
-
 		return get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'hybrid-core' ) );
 	}
 
@@ -232,7 +222,6 @@ class Title {
 	 * @return string
 	 */
 	public static function week() {
-
 		return sprintf(
 			// Translators: 1 is the week number and 2 is the year.
 			esc_html__( 'Week %1$s of %2$s', 'hybrid-core' ),
@@ -249,7 +238,6 @@ class Title {
 	 * @return string
 	 */
 	public static function day() {
-
 		return get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'hybrid-core' ) );
 	}
 
@@ -261,7 +249,6 @@ class Title {
 	 * @return string
 	 */
 	public static function hour() {
-
 		return get_the_time( esc_html_x( 'g a', 'hour archives time format', 'hybrid-core' ) );
 	}
 
@@ -273,7 +260,6 @@ class Title {
 	 * @return string
 	 */
 	public static function minute() {
-
 		return sprintf(
 			// Translators: Minute archive title. %s is the minute time format.
 			esc_html__( 'Minute %s', 'hybrid-core' ),
@@ -289,7 +275,6 @@ class Title {
 	 * @return string
 	 */
 	public static function minuteHour() {
-
 		return get_the_time( esc_html_x( 'g:i a', 'minute and hour archives time format', 'hybrid-core' ) );
 	}
 }

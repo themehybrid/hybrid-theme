@@ -22,7 +22,6 @@ namespace Hybrid\Theme\Sidebar;
  * @return void
  */
 function display_name( $sidebar_id ) {
-
 	echo esc_html( render_name( $sidebar_id ) );
 }
 

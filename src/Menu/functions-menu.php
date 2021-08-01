@@ -22,7 +22,6 @@ namespace Hybrid\Theme\Menu;
  * @return void
  */
  function display_name( $location ) {
-
 	 echo esc_html( render_name( $location ) );
  }
 
@@ -52,7 +51,6 @@ function render_name( $location ) {
  * @return void
  */
 function display_location( $location ) {
-
 	echo esc_html( render_location( $location ) );
 }
 

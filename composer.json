@@ -1,6 +1,6 @@
 {
 	"name"        : "themehybrid/hybrid-theme",
-	"description" : "Hybrid Theme is an add-on for the Hybrid Core framework, which provides collection of optimizations and helper tools to aid in Theme development.",
+	"description" : "A collection of helper functions and filters to aid in theme development.",
 	"keywords"    : [ "wordpress" ],
 	"homepage"    : "https://github.com/themehybrid/hybrid-theme",
 	"license"     : "GPL-2.0-or-later",
@@ -26,7 +26,7 @@
 	},
 	"require"     : {
 		"php" : ">=5.6",
-		"themehybrid/hybrid-core" : "dev-master",
+		"themehybrid/hybrid-core"     : "dev-master",
 		"themehybrid/hybrid-template" : "dev-master"
 	}
 }

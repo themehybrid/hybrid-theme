@@ -23,7 +23,6 @@ namespace Hybrid\Theme;
  * @return string
  */
 function sprintf_theme_dir( $value ) {
-
 	return sprintf( $value, get_template_directory(), get_stylesheet_directory() );
 }
 
@@ -36,7 +35,6 @@ function sprintf_theme_dir( $value ) {
  * @return string
  */
 function sprintf_theme_uri( $value ) {
-
 	return sprintf( $value, get_template_directory_uri(), get_stylesheet_directory_uri() );
 }
 
@@ -76,7 +74,6 @@ function hex_to_rgb( $hex ) {
  * @return bool
  */
 function is_script_debug() {
-
 	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
 }
 
@@ -91,7 +88,6 @@ function is_script_debug() {
  * @return string
  */
 function replace_html_class( $class, $html ) {
-
 	return preg_replace(
 		"/class=(['\"]).+?(['\"])/i",
 		'class=$1' . esc_attr( $class ) . '$2',
@@ -111,7 +107,6 @@ function replace_html_class( $class, $html ) {
  * @return bool
  */
 function widget_exists( $widget ) {
-
 	return isset( $GLOBALS['wp_widget_factory']->widgets[ $widget ] );
 }
 
@@ -149,16 +144,11 @@ function blog_url() {
  * @return bool
  */
 function is_plural() {
-
 	return is_home() || is_archive() || is_search();
 }
 
 /**
  * Whether a child theme is in use.
- * Using custom function, so we can avoid undefined constant TEMPLATEPATH - assumed 'TEMPLATEPATH' warning.
- * When used before 'after_theme_setup' hook.
- *
- * @see https://developer.wordpress.org/reference/functions/is_child_theme/#user-contributed-notes
  *
  * @since  5.0.3
  * @access public
