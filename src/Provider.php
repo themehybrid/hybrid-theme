@@ -31,7 +31,7 @@ class Provider extends ServiceProvider {
 	 * @access protected
 	 * @return void
 	 */
-	protected function boot() {
+	public function boot() {
 		require_once 'bootstrap-filters.php';
 	}
 }
