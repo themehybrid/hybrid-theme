@@ -5,12 +5,12 @@
  * Helpers are functions designed for quickly accessing data from the container
  * that we need throughout the framework.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme;

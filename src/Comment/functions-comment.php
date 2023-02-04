@@ -4,12 +4,12 @@
  *
  * Helper functions and template tags related to comments.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme\Comment;
@@ -112,7 +112,7 @@ function render_author_link( array $args = [] ) {
     $author  = get_comment_author( $comment );
     $html    = sprintf( $args['text'], esc_html( $author ) );
 
-    if ( $url && 'http://' !== $url ) {
+    if ( $url && ( 'http://' !== $url || 'https://' !== $url ) ) {
         $html = sprintf(
             '<a href="%s" class="%s" rel="external nofollow">%s</a>',
             esc_url( $url ),
