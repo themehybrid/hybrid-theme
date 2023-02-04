@@ -4,10 +4,11 @@
  *
  * Helper functions and template tags related to the theme itself.
  *
- * @package   HybridCore
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
+ * @package   HybridTheme
+ * @link      https://themehybrid.com/hybrid-theme
+ *
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -20,120 +21,119 @@ namespace Hybrid\Theme;
  * filter the final theme mod, use the core `theme_mod_{$name}` filter hook.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $name
- * @param  mixed   $default
+ * @param  string $name
+ * @param  mixed  $default
  * @return mixed
+ *
+ * @access public
  */
 function mod( $name, $default = false ) {
-	return get_theme_mod(
-		$name,
-		apply_filters( "hybrid/theme/mod/{$name}/default", $default )
-	);
+    return get_theme_mod(
+        $name,
+        apply_filters( "hybrid/theme/mod/{$name}/default", $default )
+    );
 }
 
 /**
  * Outputs the [parent] theme link HTML.
  *
  * @since  1.0.0
- * @access public
- * @param  array  $args
+ * @param  array $args
  * @return void
+ *
+ * @access public
  */
 function display_link( array $args = [] ) {
-	echo render_link( $args );
+    echo render_link( $args );
 }
 
 /**
  * Returns the [parent] theme link HTML.
  *
  * @since  1.0.0
- * @access public
- * @param  array  $args
+ * @param  array $args
  * @return string
+ *
+ * @access public
  */
 function render_link( array $args = [] ) {
 
-	$args = wp_parse_args( $args, [
-		'class'  => 'theme-link',
-		'before' => '',
-		'after'  => ''
-	] );
+    $args = wp_parse_args( $args, [
+        'class'  => 'theme-link',
+        'before' => '',
+        'after'  => '',
+    ] );
 
-	$theme = wp_get_theme( get_template() );
+    $theme = wp_get_theme( get_template() );
 
-	$allowed = [
-		'abbr'    => [ 'title' => true ],
-		'acronym' => [ 'title' => true ],
-		'code'    => true,
-		'em'      => true,
-		'strong'  => true
-	];
+    $allowed = [
+        'abbr'    => [ 'title' => true ],
+        'acronym' => [ 'title' => true ],
+        'code'    => true,
+        'em'      => true,
+        'strong'  => true,
+    ];
 
-	$html = sprintf(
-		'<a class="%s" href="%s">%s</a>',
-		esc_attr( $args['class'] ),
-		esc_url( $theme->display( 'ThemeURI' ) ),
-		wp_kses( $theme->display( 'Name' ), $allowed )
-	);
+    $html = sprintf(
+        '<a class="%s" href="%s">%s</a>',
+        esc_attr( $args['class'] ),
+        esc_url( $theme->display( 'ThemeURI' ) ),
+        wp_kses( $theme->display( 'Name' ), $allowed )
+    );
 
-	return apply_filters(
-		'hybrid/theme/link/parent',
-		$args['before'] . $html . $args['after']
-	);
+    return apply_filters( 'hybrid/theme/link/parent', $args['before'] . $html . $args['after'] );
 }
 
 /**
  * Outputs the child theme link HTML.
  *
  * @since  1.0.0
- * @access public
- * @param  array  $args
+ * @param  array $args
  * @return void
+ *
+ * @access public
  */
 function display_child_link( array $args = [] ) {
-	echo render_child_link( $args );
+    echo render_child_link( $args );
 }
 
 /**
  * Returns the child theme link HTML.
  *
  * @since  1.0.0
- * @access public
- * @param  array  $args
+ * @param  array $args
  * @return string
+ *
+ * @access public
  */
 function render_child_link( array $args = [] ) {
 
-	if ( ! \Hybrid\Theme\is_child_theme() ) {
-		return '';
-	}
+    if ( ! is_child_theme() ) {
+        return '';
+    }
 
-	$args = wp_parse_args( $args, [
-		'class'  => 'child-link',
-		'before' => '',
-		'after'  => ''
-	] );
+    $args = wp_parse_args( $args, [
+        'class'  => 'child-link',
+        'before' => '',
+        'after'  => '',
+    ] );
 
-	$theme = wp_get_theme();
+    $theme = wp_get_theme();
 
-	$allowed = [
-		'abbr'    => [ 'title' => true ],
-		'acronym' => [ 'title' => true ],
-		'code'    => true,
-		'em'      => true,
-		'strong'  => true
-	];
+    $allowed = [
+        'abbr'    => [ 'title' => true ],
+        'acronym' => [ 'title' => true ],
+        'code'    => true,
+        'em'      => true,
+        'strong'  => true,
+    ];
 
-	$html = sprintf(
-		'<a class="%s" href="%s">%s</a>',
-		esc_attr( $args['class'] ),
-		esc_url( $theme->display( 'ThemeURI' ) ),
-		wp_kses( $theme->display( 'Name' ), $allowed )
-	);
+    $html = sprintf(
+        '<a class="%s" href="%s">%s</a>',
+        esc_attr( $args['class'] ),
+        esc_url( $theme->display( 'ThemeURI' ) ),
+        wp_kses( $theme->display( 'Name' ), $allowed )
+    );
 
-	return apply_filters(
-		'hybrid/theme/link/child',
-		$args['before'] . $html . $args['after']
-	);
+    return apply_filters( 'hybrid/theme/link/child', $args['before'] . $html . $args['after'] );
 }
