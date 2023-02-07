@@ -2,6 +2,8 @@
 
 Hybrid Theme is a collection of helper functions and filters to aid in theme development.
 
+Note: Old Hybrid View package now resides in this package as `Legacy` view system.
+
 ## Requirements
 
 * WordPress 4.9+.
