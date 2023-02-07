@@ -23,3 +23,4 @@ require_once 'Menu/functions-menu.php';
 require_once 'Post/functions-post.php';
 require_once 'Sidebar/functions-sidebar.php';
 require_once 'Site/functions-site.php';
+require_once 'View/functions-view.php';
