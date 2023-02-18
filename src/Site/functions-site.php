@@ -4,12 +4,12 @@
  *
  * Helper functions and template tags related to the site.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme\Site;

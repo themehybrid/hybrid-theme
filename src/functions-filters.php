@@ -6,12 +6,12 @@
  * adding or modifying the output of common WordPress template tags to make for
  * a richer theme development experience.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme;
@@ -273,11 +273,10 @@ function nav_menu_css_class( $classes, $item ) {
 
     foreach ( [ 'item', 'parent', 'ancestor' ] as $type ) {
 
-        if ( ! in_array( "current-menu-{$type}", $classes ) && ! in_array( "current_page_{$type}", $classes ) ) {
-            continue;
-        }
+        if ( in_array( "current-menu-{$type}", $classes ) || in_array( "current_page_{$type}", $classes ) ) {
 
-        $_classes[] = 'item' === $type ? 'menu__item--current' : "menu__item--{$type}";
+            $_classes[] = 'item' === $type ? 'menu__item--current' : "menu__item--{$type}";
+        }
     }
 
     // If the menu item is a post type archive and we're viewing a single
@@ -795,18 +794,17 @@ function post_class_filter( $classes, $class, $post_id ) {
 
     foreach ( (array) $taxonomies as $taxonomy ) {
 
-        if ( ! is_object_in_taxonomy( get_post_type(), $taxonomy ) ) {
-            continue;
-        }
+        if ( is_object_in_taxonomy( get_post_type(), $taxonomy ) ) {
 
-        $terms = get_the_terms( $post_id, $taxonomy );
+            $terms = get_the_terms( $post_id, $taxonomy );
 
-        foreach ( (array) $terms as $term ) {
+            foreach ( (array) $terms as $term ) {
 
-            $name = 'post_tag' === $taxonomy ? 'tag' : $taxonomy;
-            $slug = sanitize_html_class( $term->slug, $term->term_id );
+                $name = 'post_tag' === $taxonomy ? 'tag' : $taxonomy;
+                $slug = sanitize_html_class( $term->slug, $term->term_id );
 
-            $classes[] = sprintf( 'entry--%s-%s', $name, $slug );
+                $classes[] = sprintf( 'entry--%s-%s', $name, $slug );
+            }
         }
     }
 

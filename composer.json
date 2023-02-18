@@ -23,6 +23,8 @@
 		"themehybrid/hybrid-core": "^6.0",
 		"themehybrid/hybrid-template": "^1.0"
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Hybrid\\Theme\\": "src/"
