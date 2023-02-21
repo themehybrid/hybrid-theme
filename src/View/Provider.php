@@ -18,6 +18,9 @@
 namespace Hybrid\Theme\View;
 
 use Hybrid\Core\ServiceProvider;
+use Hybrid\Theme\Facades\View;
+
+use function Hybrid\Tools\collect;
 
 /**
  * View provider class.
@@ -68,6 +71,48 @@ class Provider extends ServiceProvider {
      */
     protected function createFactory( $resolver, $finder, $events ) {
         return new Factory( $resolver, $finder, $events );
+    }
+
+    /**
+     * Boot.
+     */
+    public function boot() {
+
+        // Add view paths.
+        View::addLocation( get_stylesheet_directory() . '/views', 100 );
+        View::addLocation( get_template_directory() . '/views', 50 );
+
+        View::composer('*', function ( $view ) {
+            $this->maybeShiftAttachment( $view );
+        });
+    }
+
+    /**
+     * Removes core WP's `prepend_attachment` filter whenever a theme is
+     * building custom attachment templates. We'll assume that the theme
+     * author will handle the appropriate output in the template itself.
+     *
+     * @param \Hybrid\View\View $view
+     * @return void
+     */
+    protected function maybeShiftAttachment( $view ) {
+
+        if ( ! in_the_loop() || 'attachment' !== get_post_type() ) {
+            return;
+        }
+
+        $viewName = $view->getName();
+
+        $filtered_entry_templates = collect( [ 'entry', 'post', 'entry.archive', 'entry.single' ] )->filter( static fn( $value ) => str_contains( $viewName, $value ) );
+
+        $filtered_embed_template = collect( [ 'embed' ] )->filter( static fn( $value ) => str_contains( $viewName, $value ) );
+
+        if ( $filtered_entry_templates->isNotEmpty() ) {
+            remove_filter( 'the_content', 'prepend_attachment' );
+        } elseif ( $filtered_embed_template->isNotEmpty() ) {
+            remove_filter( 'the_content', 'prepend_attachment' );
+            remove_filter( 'the_excerpt_embed', 'wp_embed_excerpt_attachment' );
+        }
     }
 
 }
