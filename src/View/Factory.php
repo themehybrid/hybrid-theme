@@ -27,6 +27,17 @@ class Factory extends ViewFactory {
 
         unset( $data['slugs'] );
 
+        return parent::first( $this->prepareFallbackTemplates( $view, $slugs ), $data, $mergeData );
+    }
+
+    /**
+     * Prepare the fallback templates.
+     *
+     * @param  string                            $view
+     * @param \Hybrid\Contracts\Arrayable|array $slugs
+     * @return array
+     */
+    public function prepareFallbackTemplates( $view, $slugs ) {
         $templates = [];
 
         // Uses the slugs to build a hierarchy.
@@ -42,7 +53,7 @@ class Factory extends ViewFactory {
         // Fallback to `{$name}` as a last resort.
         $templates[] = "{$view}";
 
-        return parent::first( $templates, $data, $mergeData );
+        return $templates;
     }
 
     /**
