@@ -2,6 +2,17 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-theme/commits/master) for the latest release.
 
+## [2.0.0.beta.1] - 2023-02-22
+
+### Changed
+
+- Bump Hybrid Core version to 7.0
+- Moved fallback templates logic into method `\Hybrid\Theme\View\Factory::prepareFallbackTemplates()`
+
+### Added
+
+- Template paths, parent & child theme(s) `themes/parenttheme/views`, `themes/childtheme/views`
+
 ## [2.0.0.alpha.1] - 2023-02-04
 
 ### Added
