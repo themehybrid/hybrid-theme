@@ -2,6 +2,14 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-theme/commits/master) for the latest release.
 
+## [2.0.0-beta.2] - 2023-06-07
+
+### Changed
+
+- Inline template `slugs`, `hierarchy`
+- Filterable template `slugs`, `hierarchy`
+- Filterable fallback template(s)
+
 ## [2.0.0.beta.1] - 2023-02-22
 
 ### Changed
