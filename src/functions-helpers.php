@@ -6,9 +6,10 @@
  * that we need throughout the framework.
  *
  * @package   HybridCore
+ * @link      https://themehybrid.com/hybrid-core
+ *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -18,51 +19,58 @@ namespace Hybrid\Theme;
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $value
+ * @param  string $value
  * @return string
+ *
+ * @access public
  */
 function sprintf_theme_dir( $value ) {
-	return sprintf( $value, get_template_directory(), get_stylesheet_directory() );
+    return sprintf( $value, get_template_directory(), get_stylesheet_directory() );
 }
 
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory URIs.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $value
+ * @param  string $value
  * @return string
+ *
+ * @access public
  */
 function sprintf_theme_uri( $value ) {
-	return sprintf( $value, get_template_directory_uri(), get_stylesheet_directory_uri() );
+    return sprintf( $value, get_template_directory_uri(), get_stylesheet_directory_uri() );
 }
 
 /**
  * Converts a hex color to RGB.  Returns the RGB values as an array.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $hex
+ * @param  string $hex
  * @return array
+ *
+ * @access public
  */
 function hex_to_rgb( $hex ) {
 
-	// Remove "#" if it was added.
-	$color = trim( $hex, '#' );
+    // Remove "#" if it was added.
+    $color = trim( $hex, '#' );
 
-	// If the color is three characters, convert it to six.
-        if ( 3 === strlen( $color ) ) {
-		$color = $color[0] . $color[0] . $color[1] . $color[1] . $color[2] . $color[2];
-	}
+    // If the color is three characters, convert it to six.
+    if ( 3 === strlen( $color ) ) {
+        $color = $color[0] . $color[0] . $color[1] . $color[1] . $color[2] . $color[2];
+    }
 
-	// Get the red, green, and blue values.
-	$red   = hexdec( $color[0] . $color[1] );
-	$green = hexdec( $color[2] . $color[3] );
-	$blue  = hexdec( $color[4] . $color[5] );
+    // Get the red, green, and blue values.
+    $red   = hexdec( $color[0] . $color[1] );
+    $green = hexdec( $color[2] . $color[3] );
+    $blue  = hexdec( $color[4] . $color[5] );
 
-	// Return the RGB colors as an array.
-	return [ 'r' => $red, 'g' => $green, 'b' => $blue ];
+    // Return the RGB colors as an array.
+    return [
+        'b' => $blue,
+        'g' => $green,
+        'r' => $red,
+    ];
 }
 
 /**
@@ -70,11 +78,12 @@ function hex_to_rgb( $hex ) {
  * generally used to decide whether to load development versions of scripts/styles.
  *
  * @since  1.0.0
- * @access public
  * @return bool
+ *
+ * @access public
  */
 function is_script_debug() {
-	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
+    return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG;
 }
 
 /**
@@ -82,18 +91,19 @@ function is_script_debug() {
  * replaces the first class attribute it comes upon and stops.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $class
- * @param  string  $html
+ * @param  string $class
+ * @param  string $html
  * @return string
+ *
+ * @access public
  */
 function replace_html_class( $class, $html ) {
-	return preg_replace(
-		"/class=(['\"]).+?(['\"])/i",
-		'class=$1' . esc_attr( $class ) . '$2',
-		$html,
-		1
-	);
+    return preg_replace(
+        "/class=(['\"]).+?(['\"])/i",
+        'class=$1' . esc_attr( $class ) . '$2',
+        $html,
+        1
+    );
 }
 
 /**
@@ -102,12 +112,13 @@ function replace_html_class( $class, $html ) {
  * within a template.
  *
  * @since  1.0.0
- * @access public
- * @param  string  $widget
+ * @param  string $widget
  * @return bool
+ *
+ * @access public
  */
 function widget_exists( $widget ) {
-	return isset( $GLOBALS['wp_widget_factory']->widgets[ $widget ] );
+    return isset( $GLOBALS['wp_widget_factory']->widgets[ $widget ] );
 }
 
 /**
@@ -116,21 +127,22 @@ function widget_exists( $widget ) {
  * set to a different page.  This function handles both scenarios.
  *
  * @since  1.0.0
- * @access public
  * @return string
+ *
+ * @access public
  */
 function blog_url() {
 
-	$blog_url = '';
+    $blog_url = '';
 
-	if ( 'posts' === get_option( 'show_on_front' ) ) {
-		$blog_url = home_url();
+    if ( 'posts' === get_option( 'show_on_front' ) ) {
+        $blog_url = home_url();
 
-	} elseif ( 0 < ( $page_for_posts = get_option( 'page_for_posts' ) ) ) {
-		$blog_url = get_permalink( $page_for_posts );
-	}
+    } elseif ( 0 < ( $page_for_posts = get_option( 'page_for_posts' ) ) ) {
+        $blog_url = get_permalink( $page_for_posts );
+    }
 
-	return $blog_url ?: '';
+    return $blog_url ?: '';
 }
 
 /**
@@ -140,20 +152,22 @@ function blog_url() {
  * wouldn't account for the 404 page.
  *
  * @since  1.0.0
- * @access public
  * @return bool
+ *
+ * @access public
  */
 function is_plural() {
-	return is_home() || is_archive() || is_search();
+    return is_home() || is_archive() || is_search();
 }
 
 /**
  * Whether a child theme is in use.
  *
  * @since  5.0.3
- * @access public
  * @return bool True if a child theme is in use, false otherwise.
+ *
+ * @access public
  */
 function is_child_theme() {
-	return ( get_template_directory() !== get_stylesheet_directory() );
+    return get_template_directory() !== get_stylesheet_directory();
 }
