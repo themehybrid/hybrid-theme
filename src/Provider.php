@@ -8,8 +8,8 @@
  * @package   HybridTheme
  * @link      https://github.com/justintadlock/hybrid-theme
  *
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2021, Justin Tadlock
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
