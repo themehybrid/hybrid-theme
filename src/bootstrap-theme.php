@@ -7,13 +7,14 @@
  * in `bootstrap-autoload.php`.
  *
  * @package   HybridCore
- * @author    Justin Tadlock <justintadlock@gmail.com>
- * @copyright Copyright (c) 2008 - 2021, Justin Tadlock
- * @link      https://themehybrid.com/hybrid-core
+ * @link      https://github.com/themehybrid/hybrid-theme
+ *
+ * @author    Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-# Autoloads our custom functions files that are not loaded via the class loader.
+// Autoloads our custom functions files that are not loaded via the class loader.
 require_once 'functions-filters.php';
 require_once 'functions-helpers.php';
 require_once 'functions-theme.php';
