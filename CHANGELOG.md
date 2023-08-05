@@ -2,6 +2,12 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-theme/commits/master) for the latest release.
 
+## [2.0.0-beta.3] - 2023-08-05
+
+### Changed
+
+- lint php files & cleanup
+
 ## [2.0.0-beta.2] - 2023-06-07
 
 ### Changed
@@ -10,7 +16,7 @@ You can see the changes made via the [commit log](https://github.com/themehybrid
 - Filterable template `slugs`, `hierarchy`
 - Filterable fallback template(s)
 
-## [2.0.0.beta.1] - 2023-02-22
+## [2.0.0-beta.1] - 2023-02-22
 
 ### Changed
 
@@ -21,7 +27,7 @@ You can see the changes made via the [commit log](https://github.com/themehybrid
 
 - Template paths, parent & child theme(s) `themes/parenttheme/views`, `themes/childtheme/views`
 
-## [2.0.0.alpha.1] - 2023-02-04
+## [2.0.0-alpha.1] - 2023-02-04
 
 ### Added
 
