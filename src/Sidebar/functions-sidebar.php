@@ -17,11 +17,8 @@ namespace Hybrid\Theme\Sidebar;
 /**
  * Outputs a sidebar name.
  *
- * @since  1.0.0
  * @param  string $sidebar_id
  * @return void
- *
- * @access public
  */
 function display_name( $sidebar_id ) {
     echo esc_html( render_name( $sidebar_id ) );
@@ -30,12 +27,9 @@ function display_name( $sidebar_id ) {
 /**
  * Function for grabbing a dynamic sidebar name.
  *
- * @since  1.0.0
  * @global array   $wp_registered_sidebars
  * @param  string $sidebar_id
  * @return string
- *
- * @access public
  */
 function render_name( $sidebar_id ) {
     global $wp_registered_sidebars;

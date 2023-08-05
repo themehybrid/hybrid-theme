@@ -18,10 +18,6 @@ namespace Hybrid\Theme\Util;
 
 /**
  * Title static class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Title {
 

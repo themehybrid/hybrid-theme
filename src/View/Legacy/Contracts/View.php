@@ -20,10 +20,6 @@ use Hybrid\Contracts\Renderable;
 
 /**
  * View interface.
- *
- * @since  1.0.0
- *
- * @access public
  */
 interface View extends Renderable, Displayable {
 

@@ -5,7 +5,6 @@ namespace Hybrid\Theme\View;
 use Hybrid\Tools\Arr;
 use Hybrid\View\Factory as ViewFactory;
 use Hybrid\View\MockView;
-
 use function Hybrid\Template\Hierarchy\hierarchy as templateHierarchy;
 use function Hybrid\Theme\Post\hierarchy as postHierarchy;
 use function Hybrid\Tools\str;

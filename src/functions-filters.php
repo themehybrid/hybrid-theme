@@ -27,10 +27,7 @@ use function Hybrid\Template\locate as locate_template;
  * 'attachment' post type.  Technically, these are already used for attachments in core, but
  * they're not registered.
  *
- * @since  1.0.0
  * @return void
- *
- * @access public
  */
 function post_type_support() {
 
@@ -45,10 +42,7 @@ function post_type_support() {
 /**
  * Adds the meta charset to the header.
  *
- * @since  1.0.0
  * @return void
- *
- * @access public
  */
 function meta_charset() {
     echo apply_filters(
@@ -60,10 +54,7 @@ function meta_charset() {
 /**
  * Adds the meta viewport to the header.
  *
- * @since  1.0.0
  * @return void
- *
- * @access public
  */
 function meta_viewport() {
     echo apply_filters(
@@ -76,10 +67,7 @@ function meta_viewport() {
  * Adds the theme generator meta tag.  This is particularly useful for checking
  * theme users' version when handling support requests.
  *
- * @since  1.0.0
  * @return void
- *
- * @access public
  */
 function meta_generator() {
     $theme = wp_get_theme( get_template() );
@@ -96,10 +84,7 @@ function meta_generator() {
 /**
  * Adds the pingback link to the header.
  *
- * @since  1.0.0
  * @return void
- *
- * @access public
  */
 function link_pingback() {
 
@@ -121,11 +106,8 @@ function link_pingback() {
  * on the current page being viewed.  It also makes sure that all tags are
  * stripped, which WP doesn't do by default (it escapes HTML).
  *
- * @since  1.0.0
  * @param  array $doctitle
  * @return array
- *
- * @access public
  */
 function document_title_parts( $doctitle ) {
 
@@ -138,11 +120,8 @@ function document_title_parts( $doctitle ) {
 /**
  * Filters `get_the_archve_title` to add better archive titles than core.
  *
- * @since  1.0.0
  * @param  string $title
  * @return string
- *
- * @access public
  */
 function archive_title_filter( $title ) {
     return apply_filters( 'hybrid/theme/archive/title', Title::current() );
@@ -151,11 +130,8 @@ function archive_title_filter( $title ) {
 /**
  * Filters `get_the_archve_description` to add better archive descriptions than core.
  *
- * @since  1.0.0
  * @param  string $desc
  * @return string
- *
- * @access public
  */
 function archive_description_filter( $desc ) {
 
@@ -186,11 +162,8 @@ function archive_description_filter( $desc ) {
 /**
  * Filters `get_the_archve_description` to add custom formatting.
  *
- * @since  1.0.0
  * @param  string $desc
  * @return string
- *
- * @access public
  */
 function archive_description_format( $desc ) {
     return apply_filters( 'hybrid/theme/archive/description', $desc );
@@ -202,11 +175,8 @@ function archive_description_format( $desc ) {
  * `(Untitled)` title appears in that scenario, allowing for the normal method
  * to work.
  *
- * @since  1.0.0
  * @param  string $title
  * @return string
- *
- * @access public
  */
 function untitled_post( $title ) {
 
@@ -221,11 +191,8 @@ function untitled_post( $title ) {
 /**
  * Filters the excerpt more output with internationalized text and a link to the post.
  *
- * @since  1.0.0
  * @param  string $text
  * @return string
- *
- * @access public
  */
 function excerpt_more( $text ) {
 
@@ -244,11 +211,8 @@ function excerpt_more( $text ) {
 /**
  * Adds custom classes to the core WP logo.
  *
- * @since  1.0.0
  * @param  string $logo
  * @return string
- *
- * @access public
  */
 function custom_logo_class( $logo ) {
 
@@ -260,12 +224,9 @@ function custom_logo_class( $logo ) {
 /**
  * Simplifies the nav menu class system.
  *
- * @since  1.0.0
  * @param  array  $classes
  * @param  object $item
  * @return array
- *
- * @access public
  */
 function nav_menu_css_class( $classes, $item ) {
 
@@ -307,11 +268,8 @@ function nav_menu_css_class( $classes, $item ) {
 /**
  * Adds a custom class to the nav menu link.
  *
- * @since  1.0.0
  * @param  array $attr;
  * @return array
- *
- * @access public
  */
 function nav_menu_link_attributes( $attr ) {
 
@@ -323,11 +281,8 @@ function nav_menu_link_attributes( $attr ) {
 /**
  * Adds a custom class to the submenus in nav menus.
  *
- * @since  1.0.0
  * @param  array $classes
  * @return array
- *
- * @access public
  */
 function nav_menu_submenu_css_class( $classes ) {
 
@@ -339,12 +294,9 @@ function nav_menu_submenu_css_class( $classes ) {
 /**
  * Filters the nav menu args when used for a widget.
  *
- * @since  1.0.0
  * @param  array    $args
  * @param  \WP_Term $menu
  * @return array
- *
- * @access public
  */
 function widget_nav_menu_args( $args, $menu ) {
 
@@ -363,11 +315,8 @@ function widget_nav_menu_args( $args, $menu ) {
 /**
  * Overwrites the HTML classes for the comment form default fields.
  *
- * @since  1.0.0
  * @param  array $fields
  * @return array
- *
- * @access public
  */
 function comment_form_default_fields( $fields ) {
 
@@ -385,11 +334,8 @@ function comment_form_default_fields( $fields ) {
 /**
  * Overwrites the HTML classes for various comment form elements.
  *
- * @since  1.0.0
  * @param  array $defaults
  * @return array
- *
- * @access public
  */
 function comment_form_defaults( $defaults ) {
 
@@ -416,11 +362,8 @@ function comment_form_defaults( $defaults ) {
  * single post view.  If this template is not found, it falls back to the
  * default `comments.php` template.
  *
- * @since  1.0.0
  * @param  string $template
  * @return string
- *
- * @access public
  */
 function comments_template( $template ) {
 
@@ -448,11 +391,8 @@ function comments_template( $template ) {
  * Fix for users who want to display content on the posts page above the posts
  * list, which is a theme feature common to themes built from the framework.
  *
- * @since  1.0.0
  * @param  object $post
  * @return void
- *
- * @access public
  */
 function enable_posts_page_editor( $post ) {
 
@@ -470,11 +410,8 @@ function enable_posts_page_editor( $post ) {
  * uses the `widget--%2$s` class, we'll fix any double `widget--widget` problems.
  * And, if the author does use a widget ID in the class, we'll try to add that in.
  *
- * @since  1.0.0
  * @param  array $params
  * @return array
- *
- * @access public
  */
 function widget_class_filter( $params ) {
 
@@ -528,12 +465,9 @@ function widget_class_filter( $params ) {
  * consistently handled and are backwards compatible with the original body
  * class functionality that existed prior to WordPress core adopting this feature.
  *
- * @since  1.0.0
  * @param  array $classes
  * @param  array $class
  * @return array
- *
- * @access public
  */
 function body_class_filter( $classes, $class ) {
 
@@ -744,13 +678,10 @@ function body_class_filter( $classes, $class ) {
  * consistently handled and are backwards compatible with the original post
  * class functionality that existed prior to WordPress core adopting this feature.
  *
- * @since  1.0.0
  * @param  array $classes
  * @param  array $class
  * @param  int   $post_id
  * @return array
- *
- * @access public
  */
 function post_class_filter( $classes, $class, $post_id ) {
 
@@ -846,14 +777,11 @@ function post_class_filter( $classes, $class, $post_id ) {
 /**
  * Adds custom classes to the WordPress comment class.
  *
- * @since  1.0.0
  * @global int          $comment_depth
  * @param  array        $classes
  * @param  string|array $class
  * @param  int          $comment_id
  * @return array
- *
- * @access public
  */
 function comment_class_filter( $classes, $class, $comment_id, $post_id ) {
     global $comment_depth;

@@ -18,8 +18,6 @@ namespace Hybrid\Theme\View\Legacy\Contracts;
  * View interface.
  *
  * @since  5.1.0
- *
- * @access public
  */
 interface Engine {
 

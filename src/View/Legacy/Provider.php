@@ -23,10 +23,6 @@ use Hybrid\Theme\View\Legacy\Contracts\View as ViewContract;
 
 /**
  * View provider class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Provider extends ServiceProvider {
 

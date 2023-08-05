@@ -24,15 +24,10 @@ namespace Hybrid\Theme\View\Legacy;
 
 use Hybrid\Theme\View\Legacy\Contracts\View as ViewContract;
 use Hybrid\Tools\Collection;
-
 use function Hybrid\Template\locate as locate_template;
 
 /**
  * View class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class View implements ViewContract {
 
@@ -90,7 +85,7 @@ class View implements ViewContract {
      *
      * @access public
      */
-    public function __construct( $name, $slugs = [], Collection $data = null ) {
+    public function __construct( $name, $slugs = [], ?Collection $data = null ) {
 
         $this->name  = $name;
         $this->slugs = (array) $slugs;

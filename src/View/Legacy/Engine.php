@@ -24,8 +24,6 @@ use Hybrid\Tools\Collection;
  * Engine class.
  *
  * @since  5.1.0
- *
- * @access public
  */
 class Engine {
 

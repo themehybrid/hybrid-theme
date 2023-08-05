@@ -19,10 +19,6 @@ use Hybrid\Core\ServiceProvider;
 
 /**
  * Theme provider.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Provider extends ServiceProvider {
 

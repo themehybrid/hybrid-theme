@@ -18,10 +18,7 @@ namespace Hybrid\Theme\Post;
  * Creates a hierarchy based on the current post. Its primary purpose is for
  * use with post views/templates.
  *
- * @since  1.0.0
  * @return array
- *
- * @access public
  */
 function hierarchy() {
 
@@ -64,11 +61,8 @@ function hierarchy() {
 /**
  * Outputs the post title HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_title( array $args = [] ) {
     echo render_title( $args );
@@ -77,11 +71,8 @@ function display_title( array $args = [] ) {
 /**
  * Returns the post title HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_title( array $args = [] ) {
 
@@ -116,11 +107,8 @@ function render_title( array $args = [] ) {
 /**
  * Outputs the post permalink HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_permalink( array $args = [] ) {
     echo render_permalink( $args );
@@ -129,11 +117,8 @@ function display_permalink( array $args = [] ) {
 /**
  * Returns the post permalink HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_permalink( array $args = [] ) {
 
@@ -159,11 +144,8 @@ function render_permalink( array $args = [] ) {
 /**
  * Outputs the post author HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_author( array $args = [] ) {
     echo render_author( $args );
@@ -172,11 +154,8 @@ function display_author( array $args = [] ) {
 /**
  * Returns the post author HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_author( array $args = [] ) {
 
@@ -208,11 +187,8 @@ function render_author( array $args = [] ) {
 /**
  * Outputs the post date HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_date( array $args = [] ) {
     echo render_date( $args );
@@ -221,11 +197,8 @@ function display_date( array $args = [] ) {
 /**
  * Returns the post date HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_date( array $args = [] ) {
 
@@ -250,11 +223,8 @@ function render_date( array $args = [] ) {
 /**
  * Outputs the post comments link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_comments_link( array $args = [] ) {
     echo render_comments_link( $args );
@@ -263,11 +233,8 @@ function display_comments_link( array $args = [] ) {
 /**
  * Returns the post comments link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_comments_link( array $args = [] ) {
 
@@ -302,11 +269,8 @@ function render_comments_link( array $args = [] ) {
 /**
  * Outputs the post terms HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_terms( array $args = [] ) {
     echo render_terms( $args );
@@ -315,11 +279,8 @@ function display_terms( array $args = [] ) {
 /**
  * Returns the post terms HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_terms( array $args = [] ) {
 
@@ -359,11 +320,8 @@ function render_terms( array $args = [] ) {
 /**
  * Outputs the post format HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_format( array $args = [] ) {
     echo render_format( $args );
@@ -372,11 +330,8 @@ function display_format( array $args = [] ) {
 /**
  * Returns the post format HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_format( array $args = [] ) {
 
@@ -405,11 +360,8 @@ function render_format( array $args = [] ) {
  * Splits the post mime type into two distinct parts: type / subtype
  * (e.g., image / png). Returns an array of the parts.
  *
- * @since  1.0.0
  * @param  \WP_Post|int $post  A post object or ID.
  * @return array
- *
- * @access public
  */
 function mime_types( $post = null ) {
 
@@ -430,11 +382,8 @@ function mime_types( $post = null ) {
  * Checks if a post has any content. Useful if you need to check if the user has
  * written any content before performing any actions.
  *
- * @since  1.0.0
  * @param  \WP_Post|int $post  A post object or post ID.
  * @return bool
- *
- * @access public
  */
 function has_content( $post = null ) {
     $post = get_post( $post );
@@ -445,11 +394,8 @@ function has_content( $post = null ) {
 /**
  * Returns the number of items in all the galleries for the post.
  *
- * @since  1.0.0
  * @param  \WP_Post|int $post  A post object or ID.
  * @return int
- *
- * @access public
  */
 function gallery_count( $post = null ) {
 

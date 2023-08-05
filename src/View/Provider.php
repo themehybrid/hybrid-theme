@@ -19,15 +19,10 @@ namespace Hybrid\Theme\View;
 
 use Hybrid\Core\ServiceProvider;
 use Hybrid\Theme\Facades\View;
-
 use function Hybrid\Tools\collect;
 
 /**
  * View provider class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Provider extends ServiceProvider {
 
