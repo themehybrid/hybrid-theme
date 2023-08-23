@@ -19,10 +19,12 @@
 		"forum": "https://themehybrid.com/board/forums/hybrid-core"
 	},
 	"require": {
-		"php": ">=7.4",
-		"themehybrid/hybrid-core": "^6.0",
+		"php": ">=8.0",
+		"themehybrid/hybrid-core": "^7.0",
 		"themehybrid/hybrid-template": "^1.0"
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"Hybrid\\Theme\\": "src/"

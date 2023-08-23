@@ -4,12 +4,12 @@
  *
  * Helper functions and template tags related to the theme itself.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme;
@@ -20,12 +20,9 @@ namespace Hybrid\Theme;
  * The purpose of this function is to provide that additional filter hook.  To
  * filter the final theme mod, use the core `theme_mod_{$name}` filter hook.
  *
- * @since  1.0.0
  * @param  string $name
  * @param  mixed  $default
  * @return mixed
- *
- * @access public
  */
 function mod( $name, $default = false ) {
     return get_theme_mod(
@@ -37,11 +34,8 @@ function mod( $name, $default = false ) {
 /**
  * Outputs the [parent] theme link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_link( array $args = [] ) {
     echo render_link( $args );
@@ -50,11 +44,8 @@ function display_link( array $args = [] ) {
 /**
  * Returns the [parent] theme link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_link( array $args = [] ) {
 
@@ -87,11 +78,8 @@ function render_link( array $args = [] ) {
 /**
  * Outputs the child theme link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_child_link( array $args = [] ) {
     echo render_child_link( $args );
@@ -100,11 +88,8 @@ function display_child_link( array $args = [] ) {
 /**
  * Returns the child theme link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_child_link( array $args = [] ) {
 

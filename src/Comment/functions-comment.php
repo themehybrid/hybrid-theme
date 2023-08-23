@@ -4,12 +4,12 @@
  *
  * Helper functions and template tags related to comments.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme\Comment;
@@ -17,10 +17,7 @@ namespace Hybrid\Theme\Comment;
 /**
  * Returns a hierarchy for the current comment.
  *
- * @since  1.0.0
  * @return array
- *
- * @access public
  */
 function hierarchy() {
 
@@ -39,11 +36,8 @@ function hierarchy() {
 /**
  * Outputs the comment author HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_author( array $args = [] ) {
     echo render_author( $args );
@@ -52,11 +46,8 @@ function display_author( array $args = [] ) {
 /**
  * Returns the comment author HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_author( array $args = [] ) {
 
@@ -79,11 +70,8 @@ function render_author( array $args = [] ) {
 /**
  * Displays the comment author link HTML.
  *
- * @since  5.2.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_author_link( array $args = [] ) {
     echo render_author_link( $args );
@@ -92,11 +80,8 @@ function display_author_link( array $args = [] ) {
 /**
  * Returns the comment author link HTML.
  *
- * @since  5.2.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_author_link( array $args = [] ) {
 
@@ -112,7 +97,7 @@ function render_author_link( array $args = [] ) {
     $author  = get_comment_author( $comment );
     $html    = sprintf( $args['text'], esc_html( $author ) );
 
-    if ( $url && 'http://' !== $url ) {
+    if ( $url && ( 'http://' !== $url || 'https://' !== $url ) ) {
         $html = sprintf(
             '<a href="%s" class="%s" rel="external nofollow">%s</a>',
             esc_url( $url ),
@@ -127,11 +112,8 @@ function render_author_link( array $args = [] ) {
 /**
  * Outputs the comment permalink HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_permalink( array $args = [] ) {
     echo render_permalink( $args );
@@ -140,11 +122,8 @@ function display_permalink( array $args = [] ) {
 /**
  * Returns the comment permalink HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_permalink( array $args = [] ) {
 
@@ -170,11 +149,8 @@ function render_permalink( array $args = [] ) {
 /**
  * Outputs the comment date HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_date( array $args = [] ) {
     echo render_date( $args );
@@ -183,11 +159,8 @@ function display_date( array $args = [] ) {
 /**
  * Returns the comment date HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_date( array $args = [] ) {
 
@@ -214,11 +187,8 @@ function render_date( array $args = [] ) {
 /**
  * Outputs the comment time HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_time( array $args = [] ) {
     echo render_time( $args );
@@ -227,11 +197,8 @@ function display_time( array $args = [] ) {
 /**
  * Returns the comment time HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_time( array $args = [] ) {
 
@@ -258,11 +225,8 @@ function render_time( array $args = [] ) {
 /**
  * Outputs the comment edit link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_edit_link( array $args = [] ) {
     echo render_edit_link( $args );
@@ -271,11 +235,8 @@ function display_edit_link( array $args = [] ) {
 /**
  * Returns the comment edit link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_edit_link( array $args = [] ) {
 
@@ -307,27 +268,21 @@ function render_edit_link( array $args = [] ) {
 /**
  * Outputs the comment reply link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_reply_link( array $args = [] ) {
     echo render_reply_link( $args );
 }
 
 /**
- * Returns the comment reply link HTML.  Note that WP's `comment_reply_link()`
- * doesn't work outside of `wp_list_comments()` without passing in the proper
- * arguments (it isn't meant to).  This function is just a wrapper for
+ * Returns the comment reply link HTML. Note that WP's `comment_reply_link()`
+ * doesn't work outside `wp_list_comments()` without passing in the proper
+ * arguments (it isn't meant to). This function is just a wrapper for
  * `get_comment_reply_link()`, which adds in the arguments automatically.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_reply_link( array $args = [] ) {
 
@@ -374,11 +329,8 @@ function render_reply_link( array $args = [] ) {
 /**
  * Outputs the comment parent link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return void
- *
- * @access public
  */
 function display_parent_link( array $args = [] ) {
     echo render_parent_link( $args );
@@ -387,11 +339,8 @@ function display_parent_link( array $args = [] ) {
 /**
  * Returns the comment parent link HTML.
  *
- * @since  1.0.0
  * @param  array $args
  * @return string
- *
- * @access public
  */
 function render_parent_link( $args = [] ) {
 
@@ -433,11 +382,8 @@ function render_parent_link( $args = [] ) {
 /**
  * Conditional function to check if a comment is approved.
  *
- * @since  1.0.0
  * @param  \WP_Comment|int  Comment object or ID.
  * @return bool
- *
- * @access public
  */
 function is_approved( $comment = null ) {
     $comment = get_comment( $comment );

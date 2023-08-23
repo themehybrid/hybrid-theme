@@ -6,22 +6,18 @@
  * matter which page we're on.  It covers some additional archive use cases that
  * are not covered in core WP.
  *
- * @package   HybridCore
+ * @package   HybridTheme
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
  * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
- * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
 namespace Hybrid\Theme\Util;
 
 /**
  * Title static class.
- *
- * @since  1.0.0
- *
- * @access public
  */
 class Title {
 
