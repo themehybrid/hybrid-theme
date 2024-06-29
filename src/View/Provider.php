@@ -74,8 +74,8 @@ class Provider extends ServiceProvider {
     public function boot() {
 
         // Add view paths.
-        View::addLocation( get_stylesheet_directory() . '/views', 100 );
-        View::addLocation( get_template_directory() . '/views', 50 );
+        View::addLocation( get_stylesheet_directory() . '/views' );
+        View::addLocation( get_template_directory() . '/views' );
 
         View::composer('*', function ( $view ) {
             $this->maybeShiftAttachment( $view );
