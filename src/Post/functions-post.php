@@ -8,7 +8,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -61,7 +61,7 @@ function hierarchy() {
 /**
  * Outputs the post title HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_title( array $args = [] ) {
@@ -71,7 +71,7 @@ function display_title( array $args = [] ) {
 /**
  * Returns the post title HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_title( array $args = [] ) {
@@ -107,7 +107,7 @@ function render_title( array $args = [] ) {
 /**
  * Outputs the post permalink HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_permalink( array $args = [] ) {
@@ -117,7 +117,7 @@ function display_permalink( array $args = [] ) {
 /**
  * Returns the post permalink HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_permalink( array $args = [] ) {
@@ -144,7 +144,7 @@ function render_permalink( array $args = [] ) {
 /**
  * Outputs the post author HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_author( array $args = [] ) {
@@ -154,7 +154,7 @@ function display_author( array $args = [] ) {
 /**
  * Returns the post author HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_author( array $args = [] ) {
@@ -187,7 +187,7 @@ function render_author( array $args = [] ) {
 /**
  * Outputs the post date HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_date( array $args = [] ) {
@@ -197,7 +197,7 @@ function display_date( array $args = [] ) {
 /**
  * Returns the post date HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_date( array $args = [] ) {
@@ -223,7 +223,7 @@ function render_date( array $args = [] ) {
 /**
  * Outputs the post comments link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_comments_link( array $args = [] ) {
@@ -233,7 +233,7 @@ function display_comments_link( array $args = [] ) {
 /**
  * Returns the post comments link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_comments_link( array $args = [] ) {
@@ -269,7 +269,7 @@ function render_comments_link( array $args = [] ) {
 /**
  * Outputs the post terms HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_terms( array $args = [] ) {
@@ -279,7 +279,7 @@ function display_terms( array $args = [] ) {
 /**
  * Returns the post terms HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_terms( array $args = [] ) {
@@ -320,7 +320,7 @@ function render_terms( array $args = [] ) {
 /**
  * Outputs the post format HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_format( array $args = [] ) {
@@ -330,7 +330,7 @@ function display_format( array $args = [] ) {
 /**
  * Returns the post format HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_format( array $args = [] ) {
@@ -360,7 +360,7 @@ function render_format( array $args = [] ) {
  * Splits the post mime type into two distinct parts: type / subtype
  * (e.g., image / png). Returns an array of the parts.
  *
- * @param  \WP_Post|int $post  A post object or ID.
+ * @param \WP_Post|int $post A post object or ID.
  * @return array
  */
 function mime_types( $post = null ) {
@@ -382,7 +382,7 @@ function mime_types( $post = null ) {
  * Checks if a post has any content. Useful if you need to check if the user has
  * written any content before performing any actions.
  *
- * @param  \WP_Post|int $post  A post object or post ID.
+ * @param \WP_Post|int $post A post object or post ID.
  * @return bool
  */
 function has_content( $post = null ) {
@@ -394,7 +394,7 @@ function has_content( $post = null ) {
 /**
  * Returns the number of items in all the galleries for the post.
  *
- * @param  \WP_Post|int $post  A post object or ID.
+ * @param \WP_Post|int $post A post object or ID.
  * @return int
  */
 function gallery_count( $post = null ) {

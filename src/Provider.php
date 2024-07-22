@@ -9,7 +9,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -25,10 +25,7 @@ class Provider extends ServiceProvider {
     /**
      * Bootstrap action/filter hook calls.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     public function boot() {
         require_once 'bootstrap-filters.php';

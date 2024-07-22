@@ -8,7 +8,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -20,8 +20,8 @@ namespace Hybrid\Theme;
  * The purpose of this function is to provide that additional filter hook.  To
  * filter the final theme mod, use the core `theme_mod_{$name}` filter hook.
  *
- * @param  string $name
- * @param  mixed  $default
+ * @param string $name
+ * @param mixed  $default
  * @return mixed
  */
 function mod( $name, $default = false ) {
@@ -34,7 +34,7 @@ function mod( $name, $default = false ) {
 /**
  * Outputs the [parent] theme link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_link( array $args = [] ) {
@@ -44,7 +44,7 @@ function display_link( array $args = [] ) {
 /**
  * Returns the [parent] theme link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_link( array $args = [] ) {
@@ -78,7 +78,7 @@ function render_link( array $args = [] ) {
 /**
  * Outputs the child theme link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return void
  */
 function display_child_link( array $args = [] ) {
@@ -88,7 +88,7 @@ function display_child_link( array $args = [] ) {
 /**
  * Returns the child theme link HTML.
  *
- * @param  array $args
+ * @param array $args
  * @return string
  */
 function render_child_link( array $args = [] ) {

@@ -16,7 +16,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -35,10 +35,7 @@ class View implements ViewContract {
      * Name of the view. This is primarily used as the folder name. However,
      * it can also be the filename as the final fallback if no folder exists.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access protected
+     * @var string
      */
     protected $name = '';
 
@@ -47,43 +44,31 @@ class View implements ViewContract {
      * `$name` property (e.g., `{$name}/{$slug}.php`). Slugs are used in
      * the order that they are set.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access protected
+     * @var string
      */
     protected $slugs = [];
 
     /**
      * An array of data that is passed into the view template.
      *
-     * @since  1.0.0
-     * @var    array
-     *
-     * @access protected
+     * @var array
      */
     protected $data = [];
 
     /**
      * The template filename.
      *
-     * @since  1.0.0
-     * @var    string
-     *
-     * @access protected
+     * @var string
      */
     protected $template = null;
 
     /**
      * Sets up the view properties.
      *
-     * @since  1.0.0
-     * @param  string $name
-     * @param  array  $slugs
-     * @param  object $data
+     * @param string $name
+     * @param array  $slugs
+     * @param object $data
      * @return object
-     *
-     * @access public
      */
     public function __construct( $name, $slugs = [], ?Collection $data = null ) {
 
@@ -100,10 +85,7 @@ class View implements ViewContract {
     /**
      * When attempting to use the object as a string, return the template output.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public function __toString() {
         return $this->render();
@@ -112,10 +94,7 @@ class View implements ViewContract {
     /**
      * Returns the array of slugs.
      *
-     * @since  5.1.0
      * @return array
-     *
-     * @access public
      */
     public function slugs() {
         return (array) $this->slugs;
@@ -125,10 +104,7 @@ class View implements ViewContract {
      * Uses the array of template slugs to build a hierarchy of potential
      * templates that can be used.
      *
-     * @since  1.0.0
      * @return array
-     *
-     * @access protected
      */
     protected function hierarchy() {
 
@@ -152,10 +128,7 @@ class View implements ViewContract {
     /**
      * Locates the template.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access protected
      */
     protected function locate() {
         return locate_template( $this->hierarchy() );
@@ -164,10 +137,7 @@ class View implements ViewContract {
     /**
      * Returns the located template.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public function template() {
 
@@ -181,10 +151,7 @@ class View implements ViewContract {
     /**
      * Sets up data to be passed to the template and renders it.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function display() {
 
@@ -214,14 +181,12 @@ class View implements ViewContract {
     /**
      * Returns the template output as a string.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public function render() {
         ob_start();
         $this->display();
+
         return ob_get_clean();
     }
 
@@ -231,10 +196,7 @@ class View implements ViewContract {
      * Note that WP refers to `$name` and `$slug` differently than we do.
      * They're the opposite of what we use in our function.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function templatePartCompat() {
 
@@ -258,10 +220,7 @@ class View implements ViewContract {
      * building custom attachment templates. We'll assume that the theme
      * author will handle the appropriate output in the template itself.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access protected
      */
     protected function maybeShiftAttachment() {
 

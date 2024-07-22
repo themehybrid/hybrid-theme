@@ -9,7 +9,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -18,7 +18,7 @@ namespace Hybrid\Theme;
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
  *
- * @param  string $value
+ * @param string $value
  * @return string
  */
 function sprintf_theme_dir( $value ) {
@@ -28,7 +28,7 @@ function sprintf_theme_dir( $value ) {
 /**
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory URIs.
  *
- * @param  string $value
+ * @param string $value
  * @return string
  */
 function sprintf_theme_uri( $value ) {
@@ -38,7 +38,7 @@ function sprintf_theme_uri( $value ) {
 /**
  * Converts a hex color to RGB.  Returns the RGB values as an array.
  *
- * @param  string $hex
+ * @param string $hex
  * @return array
  */
 function hex_to_rgb( $hex ) {
@@ -78,8 +78,8 @@ function is_script_debug() {
  * Helper function for replacing a class in an HTML string. This function only
  * replaces the first class attribute it comes upon and stops.
  *
- * @param  string $class
- * @param  string $html
+ * @param string $class
+ * @param string $html
  * @return string
  */
 function replace_html_class( $class, $html ) {
@@ -96,7 +96,7 @@ function replace_html_class( $class, $html ) {
  * useful for checking if the widget exists before directly calling `the_widget()`
  * within a template.
  *
- * @param  string $widget
+ * @param string $widget
  * @return bool
  */
 function widget_exists( $widget ) {
@@ -139,7 +139,6 @@ function is_plural() {
 /**
  * Whether a child theme is in use.
  *
- * @since  5.0.3
  * @return bool True if a child theme is in use, false otherwise.
  */
 function is_child_theme() {
