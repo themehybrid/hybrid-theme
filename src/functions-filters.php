@@ -10,7 +10,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -106,7 +106,7 @@ function link_pingback() {
  * on the current page being viewed.  It also makes sure that all tags are
  * stripped, which WP doesn't do by default (it escapes HTML).
  *
- * @param  array $doctitle
+ * @param array $doctitle
  * @return array
  */
 function document_title_parts( $doctitle ) {
@@ -120,7 +120,7 @@ function document_title_parts( $doctitle ) {
 /**
  * Filters `get_the_archve_title` to add better archive titles than core.
  *
- * @param  string $title
+ * @param string $title
  * @return string
  */
 function archive_title_filter( $title ) {
@@ -130,7 +130,7 @@ function archive_title_filter( $title ) {
 /**
  * Filters `get_the_archve_description` to add better archive descriptions than core.
  *
- * @param  string $desc
+ * @param string $desc
  * @return string
  */
 function archive_description_filter( $desc ) {
@@ -162,7 +162,7 @@ function archive_description_filter( $desc ) {
 /**
  * Filters `get_the_archve_description` to add custom formatting.
  *
- * @param  string $desc
+ * @param string $desc
  * @return string
  */
 function archive_description_format( $desc ) {
@@ -175,7 +175,7 @@ function archive_description_format( $desc ) {
  * `(Untitled)` title appears in that scenario, allowing for the normal method
  * to work.
  *
- * @param  string $title
+ * @param string $title
  * @return string
  */
 function untitled_post( $title ) {
@@ -191,7 +191,7 @@ function untitled_post( $title ) {
 /**
  * Filters the excerpt more output with internationalized text and a link to the post.
  *
- * @param  string $text
+ * @param string $text
  * @return string
  */
 function excerpt_more( $text ) {
@@ -211,7 +211,7 @@ function excerpt_more( $text ) {
 /**
  * Adds custom classes to the core WP logo.
  *
- * @param  string $logo
+ * @param string $logo
  * @return string
  */
 function custom_logo_class( $logo ) {
@@ -224,8 +224,8 @@ function custom_logo_class( $logo ) {
 /**
  * Simplifies the nav menu class system.
  *
- * @param  array  $classes
- * @param  object $item
+ * @param array  $classes
+ * @param object $item
  * @return array
  */
 function nav_menu_css_class( $classes, $item ) {
@@ -268,7 +268,7 @@ function nav_menu_css_class( $classes, $item ) {
 /**
  * Adds a custom class to the nav menu link.
  *
- * @param  array $attr;
+ * @param array $attr;
  * @return array
  */
 function nav_menu_link_attributes( $attr ) {
@@ -281,7 +281,7 @@ function nav_menu_link_attributes( $attr ) {
 /**
  * Adds a custom class to the submenus in nav menus.
  *
- * @param  array $classes
+ * @param array $classes
  * @return array
  */
 function nav_menu_submenu_css_class( $classes ) {
@@ -294,8 +294,8 @@ function nav_menu_submenu_css_class( $classes ) {
 /**
  * Filters the nav menu args when used for a widget.
  *
- * @param  array    $args
- * @param  \WP_Term $menu
+ * @param array    $args
+ * @param \WP_Term $menu
  * @return array
  */
 function widget_nav_menu_args( $args, $menu ) {
@@ -315,12 +315,12 @@ function widget_nav_menu_args( $args, $menu ) {
 /**
  * Overwrites the HTML classes for the comment form default fields.
  *
- * @param  array $fields
+ * @param array $fields
  * @return array
  */
 function comment_form_default_fields( $fields ) {
 
-    array_walk( $fields, static function( &$field, $key ) {
+    array_walk( $fields, static function ( &$field, $key ) {
 
         $field = replace_html_class(
             "comment-respond__field comment-respond__field--{$key}",
@@ -334,7 +334,7 @@ function comment_form_default_fields( $fields ) {
 /**
  * Overwrites the HTML classes for various comment form elements.
  *
- * @param  array $defaults
+ * @param array $defaults
  * @return array
  */
 function comment_form_defaults( $defaults ) {
@@ -362,7 +362,7 @@ function comment_form_defaults( $defaults ) {
  * single post view.  If this template is not found, it falls back to the
  * default `comments.php` template.
  *
- * @param  string $template
+ * @param string $template
  * @return string
  */
 function comments_template( $template ) {
@@ -391,7 +391,7 @@ function comments_template( $template ) {
  * Fix for users who want to display content on the posts page above the posts
  * list, which is a theme feature common to themes built from the framework.
  *
- * @param  object $post
+ * @param object $post
  * @return void
  */
 function enable_posts_page_editor( $post ) {
@@ -410,7 +410,7 @@ function enable_posts_page_editor( $post ) {
  * uses the `widget--%2$s` class, we'll fix any double `widget--widget` problems.
  * And, if the author does use a widget ID in the class, we'll try to add that in.
  *
- * @param  array $params
+ * @param array $params
  * @return array
  */
 function widget_class_filter( $params ) {
@@ -452,7 +452,7 @@ function widget_class_filter( $params ) {
         // new class string.
         $params[0]['before_widget'] = str_replace(
             $matches[1],
-            $matches[2] . join( ' ', $_classes ) . $matches[4],
+            $matches[2] . implode( ' ', $_classes ) . $matches[4],
             $params[0]['before_widget']
         );
     }
@@ -465,8 +465,8 @@ function widget_class_filter( $params ) {
  * consistently handled and are backwards compatible with the original body
  * class functionality that existed prior to WordPress core adopting this feature.
  *
- * @param  array $classes
- * @param  array $class
+ * @param array $classes
+ * @param array $class
  * @return array
  */
 function body_class_filter( $classes, $class ) {
@@ -678,9 +678,9 @@ function body_class_filter( $classes, $class ) {
  * consistently handled and are backwards compatible with the original post
  * class functionality that existed prior to WordPress core adopting this feature.
  *
- * @param  array $classes
- * @param  array $class
- * @param  int   $post_id
+ * @param array $classes
+ * @param array $class
+ * @param int   $post_id
  * @return array
  */
 function post_class_filter( $classes, $class, $post_id ) {
@@ -778,9 +778,9 @@ function post_class_filter( $classes, $class, $post_id ) {
  * Adds custom classes to the WordPress comment class.
  *
  * @global int          $comment_depth
- * @param  array        $classes
- * @param  string|array $class
- * @param  int          $comment_id
+ * @param array        $classes
+ * @param string|array $class
+ * @param int          $comment_id
  * @return array
  */
 function comment_class_filter( $classes, $class, $comment_id, $post_id ) {

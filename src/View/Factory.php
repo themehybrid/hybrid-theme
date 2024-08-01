@@ -14,7 +14,8 @@ class Factory extends ViewFactory {
     protected array $viewParams = [];
 
     protected $hierarchy = [];
-    protected $slugs     = [];
+
+    protected $slugs = [];
 
     /**
      * Get the evaluated view contents for the given view.
@@ -54,39 +55,51 @@ class Factory extends ViewFactory {
     public function prepareFallbackTemplates( $view, $slugs ) {
         $templates = [];
 
-        // Uses the slugs to build a hierarchy.
+        // Use the slugs to build the template hierarchy.
         foreach ( $slugs as $slug ) {
             $templates[] = "{$view}/{$slug}";
         }
 
-        // Add in a `default` template.
+        // Add a 'default' template if it is not already in the slugs.
         if ( ! in_array( 'default', $slugs ) ) {
             $templates[] = "{$view}/default";
+        }
+
+        // Include the original view in the templates if it represents a directory path
+        // and is not already present in the list of templates.
+        if ( strpos( $view, '/' ) !== false && ! in_array( $view, $templates ) ) {
+            $templates[] = $view;
+        }
+
+        // If the view path does not exist (e.g., 'menu/primary'), add a final fallback 'default' template
+        // (e.g., 'menu/default') to ensure there is a default fallback option.
+        if ( strpos( $view, '/' ) !== false ) {
+            $templates[] = pathinfo( $view, PATHINFO_DIRNAME ) . '/default';
         }
 
         return apply_filters( 'hybrid/theme/view/template/fallback', $templates, $view, $slugs );
     }
 
     /**
-     * Returns the array of slugs.
+     * Retrieves an array of slugs based on the specified type.
      *
-     * @return array
+     * @param string $type The type of slugs to retrieve ('template' or 'post').
+     * @return array The array of slugs.
      */
     public function slugs( $type = 'template' ) {
-        return $type === 'template' ? templateHierarchy() : postHierarchy();
+        return 'template' === $type ? templateHierarchy() : postHierarchy();
     }
 
     /**
      * Get the first view that actually exists from the given list.
      *
-     * @param array                             $views
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
      * @return \Hybrid\Contracts\View\View
      * @throws \InvalidArgumentException
      */
     public function firstView( array $views, $data = [], $mergeData = [] ) {
-        $view = Arr::first( $views, fn( $view) => $this->exists( $view ) );
+        $view = Arr::first( $views, fn( $view ) => $this->exists( $view ) );
 
         if ( ! $view ) {
             throw new \InvalidArgumentException( 'None of the views in the given array exist.' );
@@ -96,9 +109,7 @@ class Factory extends ViewFactory {
     }
 
     /**
-     * Perform necessary tweaks to view params,
-     * so it accepts either inline slugs,
-     * or via filter.
+     * Adjusts view parameters to accept slugs inline or via filter.
      *
      * @return void
      */
@@ -107,6 +118,11 @@ class Factory extends ViewFactory {
         $this->prepareTemplateHierarchy();
     }
 
+    /**
+     * Applies the template hierarchy filter if not already applied.
+     *
+     * @return void
+     */
     public function prepareTemplateHierarchy() {
         static $appliedHierarchy = false;
 
@@ -119,6 +135,11 @@ class Factory extends ViewFactory {
         $appliedHierarchy = true;
     }
 
+    /**
+     * Applies the template slugs filter if not already applied.
+     *
+     * @return void
+     */
     public function prepareTemplateSlugs() {
         static $appliedSlugs = false;
 
@@ -131,24 +152,29 @@ class Factory extends ViewFactory {
         $appliedSlugs = true;
     }
 
+    /**
+     * Prepares the views by determining the appropriate template hierarchy or slugs.
+     *
+     * @return array The array of templates to be used.
+     */
     public function prepareViews() {
         $name = $this->viewParams['view'];
 
-        // If an inline hierarchy is set, we will make use of it.
+        // Use inline hierarchy if set.
         $hierarchy = (array) ( $this->viewParams['data']['hierarchy'] ?? [] );
 
         if ( count( $hierarchy ) > 0 ) {
             return $hierarchy;
         }
 
-        // If the view hierarchy is set using a filter, we utilize it.
+        // Use view hierarchy set via filter if available.
         $hierarchy = (array) ( $this->hierarchy[ $name ] ?? [] );
 
         if ( count( $hierarchy ) > 0 ) {
             return $hierarchy;
         }
 
-        // If inline slugs are set, we use them.
+        // Use inline slugs if set.
         $slugs = (array) ( $this->viewParams['data']['slugs'] ?? [] );
 
         if ( count( $slugs ) > 0 ) {
@@ -160,15 +186,18 @@ class Factory extends ViewFactory {
         // Directory name.
         $name = pathinfo( $prepared_name, PATHINFO_DIRNAME );
 
-        // If slugs are set using a filter, we use them.
+        // Use slugs set via filter if available.
         $slugs = (array) ( $this->slugs[ $name ] ?? [] );
 
-        // If none of the slug types are set, we will define our own using the view file name as the main slug.
-        if ( 0 === count( $slugs ) ) {
+        // If no slugs are set and the view is a directory path, use the file name as the main slug.
+        if ( 0 === count( $slugs ) && strpos( $prepared_name, '/' ) !== false ) {
             $slugs = [ pathinfo( $prepared_name, PATHINFO_FILENAME ) ];
+        } else {
+            // If no subdirectories are found in the view name, reset to the original view.
+            $name = $prepared_name;
         }
 
-        // If none of the slugs or hierarchy is set, we will fallback to using default templates.
+        // Fallback to default templates if no slugs or hierarchy are set.
         return $this->prepareFallbackTemplates( $name, $slugs );
     }
 

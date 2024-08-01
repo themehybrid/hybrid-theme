@@ -10,7 +10,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -24,10 +24,7 @@ class Title {
     /**
      * Retrieve the current page title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function current() {
 
@@ -55,10 +52,7 @@ class Title {
     /**
      * Retrieve the general archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function archive() {
 
@@ -103,10 +97,7 @@ class Title {
     /**
      * Retrieve the front page title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function frontPage() {
         return get_bloginfo( 'name', 'display' );
@@ -115,10 +106,7 @@ class Title {
     /**
      * Retrieve the single post title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function post() {
         return single_post_title( '', false );
@@ -127,10 +115,7 @@ class Title {
     /**
      * Retrieve the home/posts-page title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function home() {
         return get_post_field( 'post_title', get_queried_object_id() );
@@ -139,10 +124,7 @@ class Title {
     /**
      * Retrieve the search results title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function search() {
         return sprintf(
@@ -155,10 +137,7 @@ class Title {
     /**
      * Retrieve the 404 page title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function error() {
         return esc_html__( '404 Not Found', 'hybrid-core' );
@@ -167,10 +146,7 @@ class Title {
     /**
      * Retrieve the term archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function term() {
         return single_term_title( '', false );
@@ -179,10 +155,7 @@ class Title {
     /**
      * Retrieve the post type archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function postTypeArchive() {
         return post_type_archive_title( '', false );
@@ -191,10 +164,7 @@ class Title {
     /**
      * Retrieve the month archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function month() {
         return single_month_title( ' ', false );
@@ -203,10 +173,7 @@ class Title {
     /**
      * Retrieve the author archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function author() {
         return get_the_author_meta( 'display_name', absint( get_query_var( 'author' ) ) );
@@ -215,10 +182,7 @@ class Title {
     /**
      * Retrieve the year archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function year() {
         return get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'hybrid-core' ) );
@@ -227,10 +191,7 @@ class Title {
     /**
      * Retrieve the week archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function week() {
         return sprintf(
@@ -244,10 +205,7 @@ class Title {
     /**
      * Retrieve the day archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function day() {
         return get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'hybrid-core' ) );
@@ -256,10 +214,7 @@ class Title {
     /**
      * Retrieve the hour archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function hour() {
         return get_the_time( esc_html_x( 'g a', 'hour archives time format', 'hybrid-core' ) );
@@ -268,10 +223,7 @@ class Title {
     /**
      * Retrieve the minute archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function minute() {
         return sprintf(
@@ -284,10 +236,7 @@ class Title {
     /**
      * Retrieve the minute + hour archive title.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public static function minuteHour() {
         return get_the_time( esc_html_x( 'g:i a', 'minute and hour archives time format', 'hybrid-core' ) );

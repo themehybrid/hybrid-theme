@@ -9,7 +9,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -21,25 +21,19 @@ use Hybrid\Contracts\Renderable;
 /**
  * View interface.
  */
-interface View extends Renderable, Displayable {
+interface View extends Displayable, Renderable {
 
     /**
      * Returns the array of slugs.
      *
-     * @since  5.1.0
      * @return array
-     *
-     * @access public
      */
     public function slugs();
 
     /**
      * Returns the absolute path to the template file.
      *
-     * @since  1.0.0
      * @return string
-     *
-     * @access public
      */
     public function template();
 

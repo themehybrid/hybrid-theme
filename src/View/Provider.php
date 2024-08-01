@@ -11,7 +11,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2023, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -29,13 +29,10 @@ class Provider extends ServiceProvider {
     /**
      * Binds the implementation of the view contract to the container.
      *
-     * @since  1.0.0
      * @return void
-     *
-     * @access public
      */
     public function register() {
-        $this->app->singleton('theme.view', function ( $app ) {
+        $this->app->singleton( 'theme.view', function ( $app ) {
             // Next we need to grab the engine resolver instance that will be used by the
             // environment. The resolver will be used by an environment to get each of
             // the various engine implementations such as plain PHP or Blade engine.
@@ -53,15 +50,15 @@ class Provider extends ServiceProvider {
             $factory->share( 'app', $app );
 
             return $factory;
-        });
+        } );
     }
 
     /**
      * Create a new Factory Instance.
      *
-     * @param  \Hybrid\View\Engines\EngineResolver $resolver
-     * @param  \Hybrid\View\ViewFinderInterface    $finder
-     * @param  \Hybrid\Contracts\Events\Dispatcher $events
+     * @param \Hybrid\View\Engines\EngineResolver $resolver
+     * @param \Hybrid\View\ViewFinderInterface    $finder
+     * @param \Hybrid\Contracts\Events\Dispatcher $events
      * @return \Hybrid\Theme\View\Factory
      */
     protected function createFactory( $resolver, $finder, $events ) {
@@ -77,9 +74,9 @@ class Provider extends ServiceProvider {
         View::addLocation( get_stylesheet_directory() . '/views' );
         View::addLocation( get_template_directory() . '/views' );
 
-        View::composer('*', function ( $view ) {
+        View::composer( '*', function ( $view ) {
             $this->maybeShiftAttachment( $view );
-        });
+        } );
     }
 
     /**

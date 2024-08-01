@@ -32,5 +32,8 @@
 		"files": [
 			"src/bootstrap-theme.php"
 		]
+	},
+	"config": {
+		"sort-packages": true
 	}
 }
