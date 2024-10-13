@@ -19,6 +19,7 @@ namespace Hybrid\Theme\View;
 
 use Hybrid\Core\ServiceProvider;
 use Hybrid\Theme\Facades\View;
+use function Hybrid\Template\path;
 use function Hybrid\Tools\collect;
 
 /**
@@ -69,10 +70,12 @@ class Provider extends ServiceProvider {
      * Boot.
      */
     public function boot() {
+        // Relative path to the templates directory.
+        $templates_path = path();
 
         // Add view paths.
-        View::addLocation( get_stylesheet_directory() . '/views' );
-        View::addLocation( get_template_directory() . '/views' );
+        View::addLocation( get_stylesheet_directory() . '/' . $templates_path );
+        View::addLocation( get_template_directory() . '/' . $templates_path );
 
         View::composer( '*', function ( $view ) {
             $this->maybeShiftAttachment( $view );

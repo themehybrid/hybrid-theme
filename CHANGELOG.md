@@ -2,6 +2,12 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-theme/commits/master) for the latest release.
 
+## [2.0.3] - 2024-10-13
+
+### Changed
+
+- Fix default template locations by making views path filterable using the path() helper function.
+
 ## [2.0.2] - 2024-08-01
 
 ### Changed
