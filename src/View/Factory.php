@@ -60,10 +60,17 @@ class Factory extends ViewFactory {
             $templates[] = "{$view}/{$slug}";
         }
 
-        // Add a 'default' template if it is not already in the slugs.
-        if ( ! in_array( 'default', $slugs ) ) {
-            $templates[] = "{$view}/default";
-        }
+		// Add the default template as a fallback when it isn't already
+		// part of the resolved template hierarchy.
+		//
+		// This can be disabled to prevent recursive lookups when the
+		// current request is already being rendered from `default.php`.
+		if (
+			! in_array('default', $slugs, true) &&
+			! ($this->viewParams['data']['skip_default_template'] ?? false)
+		) {
+			$templates[] = "{$view}/default";
+		}
 
         // Include the original view in the templates if it represents a directory path
         // and is not already present in the list of templates.
