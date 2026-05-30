@@ -6,8 +6,8 @@ Note: Old Hybrid View package now resides in this package as `Legacy` view syste
 
 ## Requirements
 
-* WordPress 6.0+.
-* PHP 7.4+ (preferably 8+).
+* WordPress 7.0+.
+* PHP 8.2+.
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Copyright and License
