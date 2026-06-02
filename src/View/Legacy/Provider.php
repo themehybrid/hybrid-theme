@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View service provider.
  *
@@ -25,7 +26,6 @@ use Hybrid\Theme\View\Legacy\Contracts\View as ViewContract;
  * View provider class.
  */
 class Provider extends ServiceProvider {
-
     /**
      * Binds the implementation of the view contract to the container.
      *
@@ -39,5 +39,4 @@ class Provider extends ServiceProvider {
         // Bind a single instance of the engine contract.
         $this->app->singleton( EngineContract::class, Engine::class );
     }
-
 }

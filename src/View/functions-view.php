@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View template tags.
  *
@@ -24,6 +25,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
      * @param string|null                       $view
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
+     *
      * @return \Hybrid\Contracts\View\View|\Hybrid\Contracts\View\Factory
      */
     function view( $view = null, $data = [], $mergeData = [] ) {
@@ -45,6 +47,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
      * @param string|null                       $view
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
+     *
      * @return \Hybrid\Contracts\View\View|\Hybrid\Contracts\View\Factory
      */
     function display( $view = null, $data = [], $mergeData = [] ) {
@@ -60,6 +63,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
      * @param string|null                       $view
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
+     *
      * @return \Hybrid\Contracts\View\View|\Hybrid\Contracts\View\Factory
      */
     function render( $view = null, $data = [], $mergeData = [] ) {

@@ -20,7 +20,6 @@ use Hybrid\Core\Facades\Facade;
  * @method static mixed shared(string $key, $default = null)
  */
 class View extends Facade {
-
     /**
      * Get the registered name of the component.
      *
@@ -29,5 +28,4 @@ class View extends Facade {
     protected static function getFacadeAccessor() {
         return 'theme.view';
     }
-
 }

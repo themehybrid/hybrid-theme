@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View contract.
  *
@@ -22,7 +23,6 @@ use Hybrid\Contracts\Renderable;
  * View interface.
  */
 interface View extends Displayable, Renderable {
-
     /**
      * Returns the array of slugs.
      *
@@ -36,5 +36,4 @@ interface View extends Displayable, Renderable {
      * @return string
      */
     public function template();
-
 }

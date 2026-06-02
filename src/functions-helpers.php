@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Helper functions.
  *
@@ -19,6 +20,7 @@ namespace Hybrid\Theme;
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory paths.
  *
  * @param string $value
+ *
  * @return string
  */
 function sprintf_theme_dir( $value ) {
@@ -29,6 +31,7 @@ function sprintf_theme_dir( $value ) {
  * Replaces `%1$s` and `%2$s` with the template and stylesheet directory URIs.
  *
  * @param string $value
+ *
  * @return string
  */
 function sprintf_theme_uri( $value ) {
@@ -39,6 +42,7 @@ function sprintf_theme_uri( $value ) {
  * Converts a hex color to RGB.  Returns the RGB values as an array.
  *
  * @param string $hex
+ *
  * @return array
  */
 function hex_to_rgb( $hex ) {
@@ -80,6 +84,7 @@ function is_script_debug() {
  *
  * @param string $class
  * @param string $html
+ *
  * @return string
  */
 function replace_html_class( $class, $html ) {
@@ -97,6 +102,7 @@ function replace_html_class( $class, $html ) {
  * within a template.
  *
  * @param string $widget
+ *
  * @return bool
  */
 function widget_exists( $widget ) {

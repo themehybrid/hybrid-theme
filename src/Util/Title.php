@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Title class.
  *
@@ -20,7 +21,6 @@ namespace Hybrid\Theme\Util;
  * Title static class.
  */
 class Title {
-
     /**
      * Retrieve the current page title.
      *
@@ -241,5 +241,4 @@ class Title {
     public static function minuteHour() {
         return get_the_time( esc_html_x( 'g:i a', 'minute and hour archives time format', 'hybrid-core' ) );
     }
-
 }

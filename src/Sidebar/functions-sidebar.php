@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Sidebar functions.
  *
@@ -18,6 +19,7 @@ namespace Hybrid\Theme\Sidebar;
  * Outputs a sidebar name.
  *
  * @param string $sidebar_id
+ *
  * @return void
  */
 function display_name( $sidebar_id ) {
@@ -28,7 +30,9 @@ function display_name( $sidebar_id ) {
  * Function for grabbing a dynamic sidebar name.
  *
  * @global array   $wp_registered_sidebars
+ *
  * @param string $sidebar_id
+ *
  * @return string
  */
 function render_name( $sidebar_id ) {

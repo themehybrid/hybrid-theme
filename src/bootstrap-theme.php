@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Functions files bootstrap.
  *

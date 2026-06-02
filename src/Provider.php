@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Customize service provider.
  *
@@ -21,7 +22,6 @@ use Hybrid\Core\ServiceProvider;
  * Theme provider.
  */
 class Provider extends ServiceProvider {
-
     /**
      * Bootstrap action/filter hook calls.
      *
@@ -30,5 +30,4 @@ class Provider extends ServiceProvider {
     public function boot() {
         require_once 'bootstrap-filters.php';
     }
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Theme functions.
  *
@@ -22,6 +23,7 @@ namespace Hybrid\Theme;
  *
  * @param string $name
  * @param mixed  $default
+ *
  * @return mixed
  */
 function mod( $name, $default = false ) {
@@ -35,6 +37,7 @@ function mod( $name, $default = false ) {
  * Outputs the [parent] theme link HTML.
  *
  * @param array $args
+ *
  * @return void
  */
 function display_link( array $args = [] ) {
@@ -45,6 +48,7 @@ function display_link( array $args = [] ) {
  * Returns the [parent] theme link HTML.
  *
  * @param array $args
+ *
  * @return string
  */
 function render_link( array $args = [] ) {
@@ -79,6 +83,7 @@ function render_link( array $args = [] ) {
  * Outputs the child theme link HTML.
  *
  * @param array $args
+ *
  * @return void
  */
 function display_child_link( array $args = [] ) {
@@ -89,6 +94,7 @@ function display_child_link( array $args = [] ) {
  * Returns the child theme link HTML.
  *
  * @param array $args
+ *
  * @return string
  */
 function render_child_link( array $args = [] ) {

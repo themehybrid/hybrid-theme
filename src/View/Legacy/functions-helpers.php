@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View template tags.
  *
@@ -24,6 +25,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\view' ) ) {
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return \Hybrid\Theme\View\Legacy\View
      */
     function view( $name, $slugs = [], $data = [] ) {
@@ -38,6 +40,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\display' ) ) {
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return void
      */
     function display( $name, $slugs = [], $data = [] ) {
@@ -52,6 +55,7 @@ if ( ! function_exists( __NAMESPACE__ . '\\render' ) ) {
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return string
      */
     function render( $name, $slugs = [], $data = [] ) {
