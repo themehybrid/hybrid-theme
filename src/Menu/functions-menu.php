@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nav menu functions.
  *
@@ -8,7 +9,7 @@
  * @link      https://github.com/themehybrid/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -18,6 +19,7 @@ namespace Hybrid\Theme\Menu;
  * Outputs the nav menu name by theme location.
  *
  * @param string $location
+ *
  * @return void
  */
 function display_name( $location ) {
@@ -28,6 +30,7 @@ function display_name( $location ) {
  * Function for grabbing a WP nav menu name based on theme location.
  *
  * @param string $location
+ *
  * @return string
  */
 function render_name( $location ) {
@@ -43,6 +46,7 @@ function render_name( $location ) {
  * Outputs the nav menu theme location name.
  *
  * @param string $location
+ *
  * @return void
  */
 function display_location( $location ) {
@@ -53,6 +57,7 @@ function display_location( $location ) {
  * Function for grabbing a WP nav menu theme location name.
  *
  * @param string $location
+ *
  * @return string
  */
 function render_location( $location ) {

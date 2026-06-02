@@ -10,7 +10,6 @@ use function Hybrid\Theme\Post\hierarchy as postHierarchy;
 use function Hybrid\Tools\str;
 
 class Factory extends ViewFactory {
-
     protected array $viewParams = [];
 
     protected $hierarchy = [];
@@ -23,6 +22,7 @@ class Factory extends ViewFactory {
      * @param string                            $view
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
+     *
      * @return \Hybrid\Contracts\View\View
      */
     public function make( $view, $data = [], $mergeData = [] ) {
@@ -50,6 +50,7 @@ class Factory extends ViewFactory {
      *
      * @param string                            $view
      * @param \Hybrid\Contracts\Arrayable|array $slugs
+     *
      * @return array
      */
     public function prepareFallbackTemplates( $view, $slugs ) {
@@ -60,8 +61,15 @@ class Factory extends ViewFactory {
             $templates[] = "{$view}/{$slug}";
         }
 
-        // Add a 'default' template if it is not already in the slugs.
-        if ( ! in_array( 'default', $slugs ) ) {
+        // Add the default template as a fallback when it isn't already
+        // part of the resolved template hierarchy.
+        //
+        // This can be disabled to prevent recursive lookups when the
+        // current request is already being rendered from `default.php`.
+        if (
+            ! in_array( 'default', $slugs, true ) &&
+            ! ( $this->viewParams['data']['skip_default_template'] ?? false )
+        ) {
             $templates[] = "{$view}/default";
         }
 
@@ -84,6 +92,7 @@ class Factory extends ViewFactory {
      * Retrieves an array of slugs based on the specified type.
      *
      * @param string $type The type of slugs to retrieve ('template' or 'post').
+     *
      * @return array The array of slugs.
      */
     public function slugs( $type = 'template' ) {
@@ -95,7 +104,9 @@ class Factory extends ViewFactory {
      *
      * @param \Hybrid\Contracts\Arrayable|array $data
      * @param array                             $mergeData
+     *
      * @return \Hybrid\Contracts\View\View
+     *
      * @throws \InvalidArgumentException
      */
     public function firstView( array $views, $data = [], $mergeData = [] ) {
@@ -200,5 +211,4 @@ class Factory extends ViewFactory {
         // Fallback to default templates if no slugs or hierarchy are set.
         return $this->prepareFallbackTemplates( $name, $slugs );
     }
-
 }

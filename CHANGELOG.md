@@ -2,6 +2,16 @@
 
 You can see the changes made via the [commit log](https://github.com/themehybrid/hybrid-theme/commits/master) for the latest release.
 
+## [2.0.4] - 2026-06-02
+
+### Changed
+
+- lint php
+- Add `skip_default_template` option to view params to avoid re-adding
+	`{view}/default` when already rendering default.php, preventing recursion.
+- Update copyright date
+- Requires PHP 8.2 as minimum version
+
 ## [2.0.3] - 2024-10-13
 
 ### Changed

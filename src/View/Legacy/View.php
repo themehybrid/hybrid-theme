@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View class.
  *
@@ -16,7 +17,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -30,7 +31,6 @@ use function Hybrid\Template\locate as locate_template;
  * View class.
  */
 class View implements ViewContract {
-
     /**
      * Name of the view. This is primarily used as the folder name. However,
      * it can also be the filename as the final fallback if no folder exists.
@@ -68,6 +68,7 @@ class View implements ViewContract {
      * @param string $name
      * @param array  $slugs
      * @param object $data
+     *
      * @return object
      */
     public function __construct( $name, $slugs = [], ?Collection $data = null ) {
@@ -238,5 +239,4 @@ class View implements ViewContract {
             remove_filter( 'the_excerpt_embed', 'wp_embed_excerpt_attachment' );
         }
     }
-
 }

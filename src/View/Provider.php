@@ -1,4 +1,5 @@
 <?php
+
 /**
  * View service provider.
  *
@@ -11,7 +12,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -26,7 +27,6 @@ use function Hybrid\Tools\collect;
  * View provider class.
  */
 class Provider extends ServiceProvider {
-
     /**
      * Binds the implementation of the view contract to the container.
      *
@@ -60,6 +60,7 @@ class Provider extends ServiceProvider {
      * @param \Hybrid\View\Engines\EngineResolver $resolver
      * @param \Hybrid\View\ViewFinderInterface    $finder
      * @param \Hybrid\Contracts\Events\Dispatcher $events
+     *
      * @return \Hybrid\Theme\View\Factory
      */
     protected function createFactory( $resolver, $finder, $events ) {
@@ -88,6 +89,7 @@ class Provider extends ServiceProvider {
      * author will handle the appropriate output in the template itself.
      *
      * @param \Hybrid\View\View $view
+     *
      * @return void
      */
     protected function maybeShiftAttachment( $view ) {
@@ -109,5 +111,4 @@ class Provider extends ServiceProvider {
             remove_filter( 'the_excerpt_embed', 'wp_embed_excerpt_attachment' );
         }
     }
-
 }

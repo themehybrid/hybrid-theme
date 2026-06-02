@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Engine class.
  *
@@ -10,7 +11,7 @@
  * @link      https://themehybrid.com/hybrid-theme
  *
  * @author    Theme Hybrid
- * @copyright Copyright (c) 2008 - 2024, Theme Hybrid
+ * @copyright Copyright (c) 2008 - 2026, Theme Hybrid
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -24,13 +25,13 @@ use Hybrid\Tools\Collection;
  * Engine class.
  */
 class Engine {
-
     /**
      * Returns a View object.
      *
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return \Hybrid\Theme\View\Legacy\Contracts\View
      */
     public function view( $name, $slugs = [], $data = [] ) {
@@ -52,6 +53,7 @@ class Engine {
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return void
      */
     public function display( $name, $slugs = [], $data = [] ) {
@@ -64,10 +66,10 @@ class Engine {
      * @param string                         $name
      * @param array|string                   $slugs
      * @param array|\Hybrid\Tools\Collection $data
+     *
      * @return string
      */
     public function render( $name, $slugs = [], $data = [] ) {
         return $this->view( $name, $slugs, $data )->render();
     }
-
 }
